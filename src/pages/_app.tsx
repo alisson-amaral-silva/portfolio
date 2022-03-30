@@ -3,6 +3,7 @@ import Head from 'next/head'
 import GlobalStyles from 'styles/global'
 import { ThemeProvider } from 'styled-components'
 import theme from 'styles/theme'
+import { appWithTranslation } from 'next-i18next'
 
 function App({ Component, pageProps }: AppProps) {
   return (
@@ -23,4 +24,4 @@ function App({ Component, pageProps }: AppProps) {
   )
 }
 
-export default App
+export default appWithTranslation(App)

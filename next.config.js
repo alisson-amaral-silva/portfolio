@@ -1,10 +1,13 @@
 // eslint-disable-next-line @typescript-eslint/no-var-requires
-const withPWA = require('next-pwa')
-const isProd = process.env.NODE_ENV === 'production'
+const { i18n } = require('./next-i18next.config')
 
-module.exports = withPWA({
-  pwa: {
-    dest: 'public',
-    disable: !isProd
-  }
-})
+module.exports = {
+  webpack5: true,
+  webpack: (config) => {
+    config.resolve.fallback = { fs: false, path: false }
+
+    return config
+  },
+  reactStrictMode: true,
+  i18n
+}
