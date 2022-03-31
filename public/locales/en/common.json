@@ -1,3 +1,6 @@
 {
-  "welcome_title":  "Welcome"
+  "welcome":  {
+    "title":"Welcome"
+  },
+  "loading": "Loading"
 }

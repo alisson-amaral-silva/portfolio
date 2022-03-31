@@ -1,14 +1,14 @@
-import Main from 'components/Main'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import Home from 'templates/Home'
 
-export default function Home() {
-  return <Main />
+export default function Index() {
+  return <Home />
 }
 
 export async function getStaticProps({ locale }) {
   return {
     props: {
-      ...(await serverSideTranslations(locale, ['home']))
+      ...(await serverSideTranslations(locale, ['common']))
     }
   }
 }
