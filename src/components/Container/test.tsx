@@ -1,4 +1,4 @@
-import theme from 'styles/theme'
+import theme from 'styles/darkTheme'
 import { render } from 'utils/test-utils'
 import { Container } from '.'
 

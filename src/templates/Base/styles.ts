@@ -10,18 +10,18 @@ export const Wrapper = styled.main`
   flex-direction: column;
   text-align: center;
   align-items: center;
-  padding: 3rem;
-  height: 100vh;
+  height: 98vh;
   justify-content: space-between;
 `
 const loadingModifiers = {
   default: (theme: DefaultTheme) => css`
     margin-top: ${theme.spacings.xlarge};
   `,
-  loading: () => css`
+  loading: (theme: DefaultTheme) => css`
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: ${theme.colors.mainBg};
   `
 }
 
@@ -29,6 +29,6 @@ export const Content = styled.div<ContentProps>`
   ${({ theme, isLoading }) => css`
     flex: 1 0 auto;
     ${!isLoading && loadingModifiers.default(theme)}
-    ${isLoading && loadingModifiers.loading()}
+    ${isLoading && loadingModifiers.loading(theme)}
   `}
 `

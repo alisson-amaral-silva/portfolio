@@ -1,7 +1,7 @@
 import { render } from '@testing-library/react'
 import { ReactElement } from 'react'
 import { ThemeProvider } from 'styled-components'
-import theme from 'styles/theme'
+import theme from 'styles/darkTheme'
 
 const customRender = (ui: ReactElement) =>
   render(<ThemeProvider theme={theme}>{ui}</ThemeProvider>)

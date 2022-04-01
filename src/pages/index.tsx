@@ -1,8 +1,13 @@
+import ThemeSwitcher from 'components/ThemeSwitcher'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import Home from 'templates/Home'
 
 export default function Index() {
-  return <Home />
+  return (
+    <ThemeSwitcher>
+      <Home />
+    </ThemeSwitcher>
+  )
 }
 
 export async function getStaticProps({ locale }) {

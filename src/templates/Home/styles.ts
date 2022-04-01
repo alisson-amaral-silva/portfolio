@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 export const Logo = styled.img`
   width: 25rem;
@@ -6,8 +6,10 @@ export const Logo = styled.img`
 `
 
 export const Title = styled.h1`
-  font-size: 2.5rem;
-  color: white;
+  ${({ theme }) => css`
+    font-size: 2.5rem;
+    color: ${theme.font.color};
+  `}
 `
 
 export const Description = styled.h2`

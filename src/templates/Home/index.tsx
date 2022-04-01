@@ -1,13 +1,17 @@
 import Loading from 'components/Loading'
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useContext } from 'react'
 import { useTranslation } from 'react-i18next'
 import Base from 'templates/Base'
 import * as S from './styles'
 
+import SwitchColorIcon from 'components/SwitchColorIcon'
+import { ThemeButton } from 'components/ThemeButton'
+import { ChangeThemeContext } from 'context/ChangeThemeContext'
+
 const Home = () => {
   const { t } = useTranslation('common')
-
   const [loading, setLoading] = useState(true)
+  const { toggleTheme, theme } = useContext(ChangeThemeContext)
 
   useEffect(() => {
     const timeout = setTimeout(() => {
@@ -26,6 +30,9 @@ const Home = () => {
 
   return (
     <Base>
+      <ThemeButton onClick={toggleTheme}>
+        <SwitchColorIcon theme={theme} />
+      </ThemeButton>
       <S.Title>{t('welcome.title')}</S.Title>
       {/* <S.Description>{description}</S.Description> */}
       <S.Illustration

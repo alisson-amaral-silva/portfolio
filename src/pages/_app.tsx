@@ -1,13 +1,11 @@
 import { AppProps } from 'next/app'
 import Head from 'next/head'
-import GlobalStyles from 'styles/global'
-import { ThemeProvider } from 'styled-components'
-import theme from 'styles/theme'
 import { appWithTranslation } from 'next-i18next'
+import { ChangeThemeProvider } from 'context/ChangeThemeContext'
 
 function App({ Component, pageProps }: AppProps) {
   return (
-    <ThemeProvider theme={theme}>
+    <ChangeThemeProvider>
       <Head>
         <title>Boilerplate</title>
         <link rel="shortcut icon" href="/img/icon-512.png" />
@@ -18,9 +16,8 @@ function App({ Component, pageProps }: AppProps) {
           content="A simple project starter to work with Typescript, react, nextJS and Styled Components"
         />
       </Head>
-      <GlobalStyles />
       <Component {...pageProps} />
-    </ThemeProvider>
+    </ChangeThemeProvider>
   )
 }
 
