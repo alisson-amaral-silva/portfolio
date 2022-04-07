@@ -55,10 +55,6 @@ const GlobalStyles: GlobalStyleComponent<
   }
 
   ${({ theme }) => css`
-    html {
-      font-size: 62.5%;
-    }
-
     html,
     body,
     #__next {
@@ -67,7 +63,8 @@ const GlobalStyles: GlobalStyleComponent<
 
     body {
       font-family: ${theme.font.family};
-      font-size: ${theme.font.sizes.medium};
+      font-size: 20px;
+      line-height: 1.3;
       background-color: ${theme.colors.mainBg};
     }
   `}

@@ -21,7 +21,7 @@ export const Wrapper = styled.header<WrapperProps>`
       padding: 0 40px;
     }
     @media (max-width: 768px) {
-      padding: 0 25px;
+      padding: 0;
     }
 
     ${scrollDirection === 'up' &&
@@ -49,15 +49,11 @@ export const IconWrapper = styled.div`
     width: 2.4rem;
     height: 2.4rem;
     cursor: pointer;
+    margin: 1.6rem;
   `}
 `
 
 export const LogoWrapper = styled.div`
-  ${media.lessThan('medium')`
-    position:absolute;
-    left:50%;
-    transform: translateX(-50%);
-  `}
   width: 10%;
   height: 10%;
 `
@@ -69,7 +65,7 @@ export const MenuNav = styled.nav`
       display: flex;
       justify-content: flex-end;
       align-items: center;
-      height: 5rem;
+      height: 4rem;
 		`}
   `}
 `

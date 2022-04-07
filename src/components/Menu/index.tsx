@@ -30,20 +30,40 @@ const Menu = () => {
 
   return (
     <S.Wrapper scrollDirection={scrollDirection} scrolledToTop={scrolledToTop}>
-      <MediaMatch lessThan="medium">
+      <MediaMatch lessThan="small">
+        <S.LogoWrapper>
+          <Link href="/" passHref>
+            <a>
+              <Logo hideOnMobile />
+            </a>
+          </Link>
+        </S.LogoWrapper>
         <S.IconWrapper onClick={() => setIsOpen(true)}>
           <MenuIcon aria-label="Open Menu" />
         </S.IconWrapper>
       </MediaMatch>
-      <S.LogoWrapper>
-        <Link href="/" passHref>
-          <a>
-            <Logo hideOnMobile />
-          </a>
-        </Link>
-      </S.LogoWrapper>
 
-      <MediaMatch greaterThan="medium">
+      <MediaMatch between>
+        <S.LogoWrapper>
+          <Link href="/" passHref>
+            <a>
+              <Logo hideOnMobile />
+            </a>
+          </Link>
+        </S.LogoWrapper>
+        <S.IconWrapper onClick={() => setIsOpen(true)}>
+          <MenuIcon aria-label="Open Menu" />
+        </S.IconWrapper>
+      </MediaMatch>
+
+      <MediaMatch greaterThan="large">
+        <S.LogoWrapper>
+          <Link href="/" passHref>
+            <a>
+              <Logo hideOnMobile />
+            </a>
+          </Link>
+        </S.LogoWrapper>
         <S.MenuNav>
           <Link href="/" passHref>
             <S.MenuLink href="/">Home</S.MenuLink>

@@ -24,7 +24,7 @@ export default {
     color: '#030517'
   },
   colors: {
-    primary: '#030517',
+    primary: '#F1C40F',
     mainBg: '#EAE4E4',
     white: '#FAFAFA',
     black: '#030517',
@@ -52,6 +52,7 @@ export default {
   transition: {
     default: '0.3s ease-in-out',
     fast: '0.1s ease-in-out',
-    all: 'all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1)'
+    all: 'all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1)',
+    easing: 'cubic-bezier(0.645, 0.045, 0.355, 1)'
   }
 } as const
