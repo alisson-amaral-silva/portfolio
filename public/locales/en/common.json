@@ -6,7 +6,25 @@
   "identity-black-img": "Black panther mask",
   "identity-white-img": "Killmonger mask",
   "greeting": "Hi, my name is",
-  "subtitle":"I'm a eclectic guy who likes making different things with many technologies.",
+  "subtitle": "I'm a eclectic guy who likes making different things with many technologies.",
   "intro": "I'm a software developer specializing in building (and occasionally designing) exceptional digital experiences. Currently, I'm focused on building accessible, human-centered products at",
-  "company": "Iteris"
+  "company": "Iteris",
+  "navigation": [
+    {
+      "name": "About",
+      "url": "/#about"
+    },
+    {
+      "name": "Experience",
+      "url": "/#jobs"
+    },
+    {
+      "name": "Work",
+      "url": "/#projects"
+    },
+    {
+      "name": "Contact",
+      "url": "/#contact"
+    }
+  ]
 }

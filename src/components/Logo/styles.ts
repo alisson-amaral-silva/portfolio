@@ -37,9 +37,4 @@ export const Wrapper = styled.div<LogoProps>`
   `}
 `
 
-export const LogoWrapper = styled.img`
-  ${media.lessThan('medium')`
-  margin: 1.6rem;
-  `}
-  margin-top: 1rem;
-`
+export const LogoWrapper = styled.img``

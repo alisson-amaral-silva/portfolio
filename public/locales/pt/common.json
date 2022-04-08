@@ -8,5 +8,23 @@
   "greeting": "Olá, meu nome é",
   "subtitle":"Eu sou um cara eclético que gosta de fazer coisas diferentes com muitas tecnologias.",
   "intro": "Eu sou um desenvolvedor de software especializado em criar (e ocasionalmente design) com excepcionais experiências digitais. Atualmente, estou focado em desenvolver produtos acessiveis e centrado no ser humano na",
-  "company": "Iteris"
+  "company": "Iteris",
+  "navigation": [
+    {
+      "name": "Sobre",
+      "url": "/#about"
+    },
+    {
+      "name": "Experiências",
+      "url": "/#jobs"
+    },
+    {
+      "name": "Trabalho",
+      "url": "/#projects"
+    },
+    {
+      "name": "Contato",
+      "url": "/#contact"
+    }
+  ]
 }

@@ -49,12 +49,11 @@ export const IntroWrapper = styled.h4`
 export const CompanyLink = styled.a`
   ${({ theme }) => css`
     color: ${theme.colors.primary};
-    text-transform: uppercase;
     text-decoration: none;
 
     display: inline-block;
     padding: 4px;
-    position: relative;
+    position: initial;
     @media (max-width: 768px) {
       position: initial;
     }
@@ -66,7 +65,7 @@ export const CompanyLink = styled.a`
       display: block;
       height: 2px;
       left: 50%;
-      position: absolute;
+      position: initial;
       background: ${theme.colors.primary};
       transition: width 0.3s ease 0s, left 0.3s ease 0s;
       width: 0;

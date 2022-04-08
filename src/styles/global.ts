@@ -66,6 +66,66 @@ const GlobalStyles: GlobalStyleComponent<
       font-size: 20px;
       line-height: 1.3;
       background-color: ${theme.colors.mainBg};
+
+      &.fadeup-enter {
+        opacity: 0.01;
+        transform: translateY(20px);
+        transition: opacity 300ms ${theme.transition.all},
+          transform 300ms ${theme.transition.all};
+      }
+
+      &.fadeup-enter-active {
+        opacity: 1;
+        transform: translateY(0px);
+        transition: opacity 300ms ${theme.transition.all},
+          transform 300ms ${theme.transition.all};
+      }
+
+      /* Fade down */
+      &.fadedown-enter {
+        opacity: 0.01;
+        transform: translateY(-20px);
+        transition: opacity 300ms ${theme.transition.all},
+          transform 300ms ${theme.transition.all};
+      }
+
+      &.fadedown-enter-active {
+        opacity: 1;
+        transform: translateY(0px);
+        transition: opacity 300ms ${theme.transition.all},
+          transform 300ms ${theme.transition.all};
+      }
+
+      /* Fade */
+      &.fade-enter {
+        opacity: 0;
+      }
+      &.fade-enter-active {
+        opacity: 1;
+        transition: opacity 300ms ${theme.transition.all};
+      }
+      &.fade-exit {
+        opacity: 1;
+      }
+      &.fade-exit-active {
+        opacity: 0;
+        transition: opacity 300ms ${theme.transition.all};
+      }
+
+      &.blur {
+        overflow: hidden;
+
+        header {
+          background-color: transparent;
+        }
+
+        #content > * {
+          filter: blur(5px) brightness(0.7);
+          transition: var(--transition);
+          pointer-events: none;
+          user-select: none;
+        }
+      }
     }
   `}
 
