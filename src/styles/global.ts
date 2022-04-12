@@ -129,9 +129,10 @@ const GlobalStyles: GlobalStyleComponent<
       .company-link {
         color: ${theme.colors.primary};
         text-decoration: none;
+        padding: 0 0.2rem;
+        line-height: 1.1;
 
         display: inline-block;
-        padding: 4px;
         position: initial;
         @media (max-width: 768px) {
           position: initial;

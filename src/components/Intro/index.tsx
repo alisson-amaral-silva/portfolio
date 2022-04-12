@@ -12,7 +12,7 @@ const Intro = () => {
         </S.HeadingNameWrapper>
         <S.HeadingSubtitleWrapper>{t('subtitle')}</S.HeadingSubtitleWrapper>
         <S.IntroWrapper>
-          {t('opening')}
+          {t('opening')}{' '}
           <a
             className="company-link"
             href="https://www.iteris.com.br/"
