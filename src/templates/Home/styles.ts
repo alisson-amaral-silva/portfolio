@@ -22,25 +22,6 @@ export const Illustration = styled.img`
   width: min(30rem, 100%);
 `
 
-export const Content = styled.div`
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  padding: 0px 150px;
-
-  margin: 0 auto;
-  width: 100%;
-  max-width: 1600px;
-  min-height: 100vh;
-  padding: 10rem 150px;
-
-  @media (max-width: 1080px) {
-    padding: 10rem 150px;
-  }
-  @media (max-width: 768px) {
-    padding: 150px 50px;
-  }
-  @media (max-width: 480px) {
-    padding: 125px 25px;
-  }
+export const Content = styled.main`
+  counter-reset: section;
 `

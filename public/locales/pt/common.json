@@ -7,7 +7,10 @@
   "identity-white-img":"Máscara do Killmonger",
   "greeting": "Olá, meu nome é",
   "subtitle":"Eu sou um cara eclético que gosta de fazer coisas diferentes com muitas tecnologias.",
-  "intro": "Eu sou um desenvolvedor de software especializado em criar (e ocasionalmente design) com excepcionais experiências digitais. Atualmente, estou focado em desenvolver produtos acessiveis e centrado no ser humano na",
+  "opening": "Eu sou um desenvolvedor de software especializado em criar (e ocasionalmente design) com excepcionais experiências digitais. Atualmente, estou focado em desenvolver produtos acessiveis e centrado no ser humano na",
+  "intro": "Oi! Meu nome é Alisson, eu gosto de criar diversas coisas na internet. Meu interesse em desenvolvimento começou em 2014, quando decidi criar algumas coisas em 3D - acabou que criar alguns jogos me ensinou algumas coisas sobre desenvolvimento, então me interessei!",
+  "current-work": "Meu principal foco hoje em dia é criar produtos acessíveis, inclusivos, modernos, com os melhores padrões de desenvolvimento e esperiências digitais na",
+  "clients": "para uma consideravel quantidade de clientes.",
   "company": "Iteris",
   "navigation": [
     {

@@ -4,14 +4,12 @@ export interface ContentProps {
   isLoading?: boolean
 }
 
-export const Wrapper = styled.main`
+export const Wrapper = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
   text-align: center;
   align-items: center;
-  height: 98vh;
-  justify-content: space-between;
 `
 const loadingModifiers = {
   default: (theme: DefaultTheme) => css`
@@ -20,6 +18,7 @@ const loadingModifiers = {
   loading: (theme: DefaultTheme) => css`
     display: flex;
     justify-content: center;
+    height: 100vh;
     align-items: center;
     background-color: ${theme.colors.mainBg};
   `

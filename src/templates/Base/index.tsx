@@ -8,7 +8,6 @@ const Base = ({ children, isLoading = false }: BaseTemplateProps) => {
   return (
     <S.Wrapper>
       {isLoading && <S.Content isLoading>{children}</S.Content>}
-      {!isLoading && <S.Content>{children}</S.Content>}
     </S.Wrapper>
   )
 }
