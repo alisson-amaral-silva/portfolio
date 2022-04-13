@@ -30,7 +30,7 @@ export const Icon = styled.img`
 
 export const FrontEndWrapper = styled.div`
   height: 100%;
-  width: 100%;
+  width: 92%;
   padding: 30px 30px;
   display: grid;
 `
