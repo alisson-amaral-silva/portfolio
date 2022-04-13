@@ -1,18 +1,12 @@
-import { useTranslation } from 'react-i18next'
 import Image from 'next/image'
-import * as S from './styles'
 import { useEffect, useRef } from 'react'
-import sr from 'utils/scroll-reveal'
-import { srConfig } from 'utils/scroll-config'
+import { useTranslation } from 'react-i18next'
 import mypic from '../../../public/img/me.jpg'
-import HardSkills from 'components/HardSkills'
+import * as S from './styles'
 
 const About = () => {
   const { t } = useTranslation('common')
   const revealContainer = useRef(null)
-  // useEffect(() => {
-  //   sr.reveal(revealContainer.current, srConfig())
-  // }, [])
 
   useEffect(() => {
     async function animate() {
@@ -37,8 +31,9 @@ const About = () => {
               href="https://www.iteris.com.br/"
               target="_blank"
               rel="noreferrer"
+              style={{ transitionDelay: `${1}00ms` }}
             >
-              <div style={{ transitionDelay: `${1}00ms` }}>{t('company')}</div>
+              {t('company')}
             </a>
             {t('clients')}
           </S.AboutParagraph>

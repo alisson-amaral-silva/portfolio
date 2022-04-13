@@ -72,7 +72,7 @@ const Menu = () => {
         </S.LinkWrapper>
 
         <S.MenuWrapper>
-          <body className={isOpen ? 'blur' : ''} />
+          <div className={isOpen ? 'blur' : ''} />
 
           <div ref={wrapperRef}>
             <S.HamburguerButtonWrapper

@@ -10,11 +10,18 @@ export const Wrapper = styled.header<WrapperProps>`
   ${({ theme, scrollDirection, scrolledToTop }) => css`
     position: fixed;
     top: 0;
+    z-index: 11;
     width: 100%;
     height: 4.8rem;
     backdrop-filter: blur(10px);
     transition: ${theme.transition.all};
     background-color: ${theme.colors.mainBg};
+    backdrop-filter: blur(10px);
+    filter: none !important;
+    pointer-events: auto !important;
+    user-select: auto !important;
+    backdrop-filter: blur(10px);
+    transition: ${theme.transition.all};
 
     @media (max-width: 1080px) {
       padding: 0 40px;

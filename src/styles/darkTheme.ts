@@ -24,11 +24,11 @@ export default {
     color: '#FAFAFA'
   },
   colors: {
-    primary: '#AB00F2',
-    lightPrimary: '#B408FF',
-    midPrimary: '#7900AD',
-    darkPrimary: '#600089',
-    mainBg: '#16151D',
+    primary: '#FF5757',
+    lightPrimary: '#FF7A7A',
+    midPrimary: '#ED2B2B',
+    darkPrimary: '#BF1313',
+    mainBg: '#1D2533',
     white: '#FAFAFA',
     black: '#030517',
     lightGray: '#EAEAEA',
