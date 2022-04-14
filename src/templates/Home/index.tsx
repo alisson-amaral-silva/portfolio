@@ -1,6 +1,7 @@
 import Intro from 'components/Intro'
 import About from 'components/About'
 import Loading from 'components/Loading'
+import Jobs from 'components/Jobs'
 import Menu from 'components/Menu'
 import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
@@ -34,6 +35,7 @@ const Home = () => {
         <Intro />
         <About />
         <HardSkills />
+        <Jobs />
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ipsum

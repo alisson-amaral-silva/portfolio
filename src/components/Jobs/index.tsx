@@ -121,19 +121,20 @@ const Jobs = () => {
                     aria-hidden={activeTabId !== i}
                     hidden={activeTabId !== i}
                   >
-                    <h3>
-                      <span>{title}</span>
-                      <span className="company">
-                        &nbsp;@&nbsp;
-                        <a href={url} className="inline-link">
-                          {company}
-                        </a>
-                      </span>
-                    </h3>
+                    <span className="default-text-color">{title}</span>
+                    <span className="company">
+                      &nbsp;@&nbsp;
+                      <a href={url} className="company-link">
+                        {company}
+                      </a>
+                    </span>
 
                     <p className="range">{range}</p>
 
-                    <div dangerouslySetInnerHTML={{ __html: html }} />
+                    <div
+                      className="default-text-color"
+                      dangerouslySetInnerHTML={{ __html: html }}
+                    />
                   </S.TabPanelWrapper>
                 </CSSTransition>
               )

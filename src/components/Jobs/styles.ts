@@ -1,3 +1,4 @@
+import { darken } from 'polished'
 import styled, { css } from 'styled-components'
 
 export const JobsSection = styled.section`
@@ -64,6 +65,7 @@ export interface TabButtonWrapperProps {
 
 export const TabButtonWrapper = styled.button<TabButtonWrapperProps>`
   ${({ theme, isActive }) => css`
+    border: none;
     display: inline-block;
     text-decoration: none;
     text-decoration-skip-ink: auto;
@@ -105,7 +107,7 @@ export const TabButtonWrapper = styled.button<TabButtonWrapperProps>`
 
     &:hover,
     &:focus {
-      background-color: ${theme.colors.lightPrimary};
+      background-color: ${theme.colors.darkMainBg};
     }
   `}
 `
@@ -180,21 +182,19 @@ export const TabPanelWrapper = styled.div<TabPanelWrapperProps>`
       }
     }
 
-    h3 {
-      margin-bottom: 2px;
-      font-size: 20px;
-      font-weight: 500;
-      line-height: 1.3;
-
-      .company {
-        color: ${theme.colors.primary};
-      }
+    .company {
+      color: ${theme.colors.primary};
     }
 
     .range {
       margin-bottom: 25px;
-      color: ${theme.colors.lightestPrimary};
+      color: ${theme.colors.primary};
+      font-weight: bold;
       font-size: 14px;
+    }
+
+    .default-text-color {
+      color: ${theme.font.color};
     }
   `}
 `

@@ -30,6 +30,7 @@ export default {
     midPrimary: '#BD9802',
     darkPrimary: '#947700',
     mainBg: '#EAE4E4',
+    darkMainBg: '#E4DDDD',
     white: '#FAFAFA',
     black: '#030517',
     lightGray: '#EAEAEA',
