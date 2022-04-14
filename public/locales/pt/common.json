@@ -16,6 +16,23 @@
   "languages": "Linguagens que eu desenvolvo",
   "dev-tools": "Ferramentas de desenvolvimento",
   "company": "Iteris",
+  "work-title": "Aonde já trabalhei",
+  "job": [
+    {
+      "company": "Iteris",
+      "range": "Maio 2018 - Atual",
+      "title": "Engenheiro de software",
+      "url": "https://www.iteris.com.br/",
+      "html": "
+      <div>
+        <ul>
+          <li>Escrever códigos modernos, performáticos e com foco em manutenibilidade para uma grande quantidade de clientes e projetos internos</li>
+          <li>Trabalhar com uma variedade de diferentes linguagens, plataformas, frameworks e gerenciamentos de conteúdo como JavaScript, TypeScript, React, Angular, Netlify, Sass, Next.JS, JQuery, Node.JS, Java, C#, .NET, etc.</li>
+          <li>Comunicar com um time multi disciplinar de engenheiros, designers e clientes no dia a dia</li>
+        </ul>
+      </div>"
+    }
+  ],
   "navigation": [
     {
       "name": "Sobre",

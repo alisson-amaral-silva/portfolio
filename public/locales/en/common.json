@@ -16,6 +16,23 @@
   "languages": "Languages and platforms that I develop",
   "dev-tools": "Dev tools",
   "company": "Iteris",
+  "work-title": "Where I have Worked",
+  "job": [
+    {
+      "company": "Iteris",
+      "range": "May 2018 - Present",
+      "title": "Software Engineer",
+      "url": "https://www.iteris.com.br/",
+      "html": "
+      <div>
+        <ul>
+          <li>Write modern, performant, maintainable code for a diverse array of client and internal projects</li>
+          <li>Work with a variety of different languages, platforms, frameworks, and content management systems such as JavaScript, TypeScript, React, Angular, Netlify, Sass, Next.JS, JQuery, Node.JS, Java, C#, .NET, etc</li>
+          <li>Communicate with multi-disciplinary teams of engineers, designers, producers, and clients on a daily basis</li>
+        </ul>
+      </div>"
+    }
+  ],
   "navigation": [
     {
       "name": "About",
