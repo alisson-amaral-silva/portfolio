@@ -1,40 +1,14 @@
 import styled, { css } from 'styled-components'
-import media from 'styled-media-query'
 
-import { LogoProps } from '.'
-
-const wrapperModifiers = {
-  normal: () => css`
-    width: 11rem;
-    height: 3.3rem;
-  `,
-  large: () => css`
-    width: 20rem;
-    height: 5.9rem;
-  `,
-  hideOnMobile: () => css`
-    ${media.lessThan('medium')`
-    width: 5.8rem;
-    height: 4.5rem;
-
-    svg{
-      height: 4.5rem
+export const LogoWrapper = styled.a`
+  ${({ theme }) => css`
+    &.logo {
+      font-size: 1.5rem;
+      color: ${theme.font.color};
+      letter-spacing: 1px;
     }
-    .text{
-      display:none;
-      pointer-events:none;
+    &.logo span {
+      color: ${theme.colors.primary};
     }
-  `}
-  `
-}
-
-export const Wrapper = styled.div<LogoProps>`
-  ${({ theme, color, size, hideOnMobile }) => css`
-    color: ${theme.colors[color!]};
-
-    ${!!size && wrapperModifiers[size]}
-    ${!!hideOnMobile && wrapperModifiers.hideOnMobile}
   `}
 `
-
-export const LogoWrapper = styled.img``

@@ -91,5 +91,8 @@
       "name": "Contact",
       "url": "#contact"
     }
-  ]
+  ],
+  "footer": {
+    "text": "Top"
+  }
 }

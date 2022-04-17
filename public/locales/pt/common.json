@@ -91,5 +91,8 @@
       "name": "Contato",
       "url": "#contact"
     }
-  ]
+  ],
+  "footer": {
+    "text": "Topo"
+  }
 }

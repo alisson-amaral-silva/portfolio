@@ -44,9 +44,7 @@ const Menu = () => {
   return (
     <S.Wrapper scrollDirection={scrollDirection} scrolledToTop={scrolledToTop}>
       <S.NavWrapper>
-        <S.LogoWrapper href="#" className="logo">
-          Portf<span>olio.</span>
-        </S.LogoWrapper>
+        <Logo />
         <S.LinkWrapper>
           <ol>
             {navLinks &&
