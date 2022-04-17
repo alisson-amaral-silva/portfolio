@@ -1,18 +1,13 @@
-import MediaMatch from 'components/MediaMatch'
-import useScrollDirection from 'hooks/useScrollDirection'
-import { Close as CloseIcon } from '@styled-icons/material-outlined/Close'
-import { Menu2 as MenuIcon } from '@styled-icons/remix-line/Menu2'
-import { useContext, useEffect, useRef, useState } from 'react'
-import * as S from './styles'
-import Link from 'next/link'
 import Logo from 'components/Logo'
-import { ChangeThemeContext } from 'context/ChangeThemeContext'
-import { ThemeButton } from 'components/ThemeButton'
 import SwitchColorIcon from 'components/SwitchColorIcon'
-import { TransitionGroup, CSSTransition } from 'react-transition-group'
+import { ThemeButton } from 'components/ThemeButton'
+import { ChangeThemeContext } from 'context/ChangeThemeContext'
 import useOnClickOutside from 'hooks/useOnClickOutside'
+import useScrollDirection from 'hooks/useScrollDirection'
+import Link from 'next/link'
+import { useContext, useEffect, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { motion } from 'framer-motion'
+import * as S from './styles'
 
 type LinkProps = {
   url: string
@@ -49,12 +44,8 @@ const Menu = () => {
   return (
     <S.Wrapper scrollDirection={scrollDirection} scrolledToTop={scrolledToTop}>
       <S.NavWrapper>
-        <S.LogoWrapper className="logo">
-          <Link href="/" passHref>
-            <a>
-              <Logo />
-            </a>
-          </Link>
+        <S.LogoWrapper href="#" className="logo">
+          Portf<span>olio.</span>
         </S.LogoWrapper>
         <S.LinkWrapper>
           <ol>
@@ -103,9 +94,9 @@ const Menu = () => {
                   </ol>
                 )}
 
-                <a href="/resume.pdf" className="resume-link">
+                {/* <a href="/resume.pdf" className="resume-link">
                   Resume
-                </a>
+                </a> */}
                 <S.ThemeMobileWrapper>
                   <ThemeButton onClick={toggleTheme}>
                     <SwitchColorIcon theme={theme} />

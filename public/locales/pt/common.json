@@ -50,43 +50,46 @@
       {
         "title": "Banco do Alisson",
         "html": "<p>Um curso que ajuda a entender Styled Components.</p>",
-        "techs": [
-          "React",
-          "Styled Components"
-        ],
+        "techs": ["React", "Styled Components"],
         "image": "/img/alisson-bank.png",
         "github": "https://github.com/alisson-amaral-silva/styled-components-studies"
       },
       {
         "title": "Material UI Phone Number TextField",
         "html": "<p>Um componente que realizei um fork, adaptei às minhas necessidades e criei um pacote npm.</p>",
-        "techs": [
-          "React",
-          "Material UI 5",
-          "Emotion"
-        ],
+        "techs": ["React", "Material UI 5", "Emotion"],
         "image": "/img/material-ui-phone-number-text-field.png",
         "github": "https://github.com/alisson-amaral-silva/material-ui-phone-number-text-field",
         "npm": "https://www.npmjs.com/package/@alisson-amaral/material-ui-phone-number-text-field"
       }
     ]
   },
+  "contact": {
+    "session": "Quais são os próximos passos?",
+    "title": "Entre em contato",
+    "text": "Minha caixa de entrada está sempre aberta, tanto para perguntas ou apenas para dizer um oi, tentarei o meu melhor para entrar em contato contigo!",
+    "button-message": "Diga um Oi!"
+  },
   "navigation": [
     {
       "name": "Sobre",
-      "url": "/#about"
+      "url": "#about"
+    },
+    {
+      "name": "Técnico",
+      "url": "#hard-skills"
     },
     {
       "name": "Experiências",
-      "url": "/#jobs"
+      "url": "#jobs"
     },
     {
-      "name": "Trabalho",
-      "url": "/#projects"
+      "name": "Projetos Criados/Estudos",
+      "url": "#experiments"
     },
     {
       "name": "Contato",
-      "url": "/#contact"
+      "url": "#contact"
     }
   ]
 }

@@ -8,6 +8,9 @@ module.exports = {
 
     return config
   },
+  env: {
+    EMAIL: process.env.EMAIL
+  },
   reactStrictMode: true,
   i18n
 }

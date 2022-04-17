@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { darken } from 'polished'
 import styled, { css } from 'styled-components'
 
@@ -86,9 +87,17 @@ export const LinkWrapper = styled.div`
   `}
 `
 
-export const LogoWrapper = styled.div`
-  width: 10%;
-  height: 10%;
+export const LogoWrapper = styled.a`
+  ${({ theme }) => css`
+    &.logo {
+      font-size: 1.5rem;
+      color: ${theme.font.color};
+      letter-spacing: 1px;
+    }
+    &.logo span {
+      color: ${theme.colors.primary};
+    }
+  `}
 `
 
 export const MenuLink = styled.a`

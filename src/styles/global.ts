@@ -59,6 +59,7 @@ const GlobalStyles: GlobalStyleComponent<
     body,
     #__next {
       height: 100%;
+      scroll-behavior: smooth;
     }
 
     main {
@@ -120,11 +121,32 @@ const GlobalStyles: GlobalStyleComponent<
       line-height: 1.1;
     }
 
+    body::-webkit-scrollbar {
+      width: 12px;
+    }
+    body::-webkit-scrollbar-track {
+      background: ${theme.colors.mainBg};
+    }
+    body::-webkit-scrollbar-thumb {
+      background-color: ${theme.colors.darkMainBg};
+      border: 3px solid ${theme.colors.mainBg};
+      border-radius: 10px;
+    }
+
     body {
       font-family: ${theme.font.family};
       font-size: 20px;
       line-height: 1.3;
       background-color: ${theme.colors.mainBg};
+      -moz-osx-font-smoothing: grayscale;
+      -webkit-font-smoothing: antialiased;
+
+      #content > * {
+        filter: blur(5px) brightness(0.7);
+        transition: ${theme.transition.all};
+        pointer-events: none;
+        user-select: none;
+      }
 
       a {
         display: inline-block;
@@ -215,7 +237,7 @@ const GlobalStyles: GlobalStyleComponent<
 
           #content > * {
             filter: blur(5px) brightness(0.7);
-            transition: var(--transition);
+            transition: ${theme.transition.all};
             pointer-events: none;
             user-select: none;
           }
@@ -324,7 +346,7 @@ const GlobalStyles: GlobalStyleComponent<
 
         #content > * {
           filter: blur(5px) brightness(0.7);
-          transition: var(--transition);
+          transition: ${theme.transition.all};
           pointer-events: none;
           user-select: none;
         }

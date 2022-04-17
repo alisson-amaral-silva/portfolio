@@ -4,6 +4,7 @@ import * as S from './styles'
 import { Github } from '@styled-icons/feather/Github'
 import { Npm } from '@styled-icons/fa-brands/Npm'
 import Image from 'next/image'
+import usePrefersReducedMotion from 'hooks/usePrefersReducedMotion'
 
 export interface ExperimentsProps {
   title: string
@@ -16,12 +17,16 @@ export interface ExperimentsProps {
 
 const Experiments = () => {
   const { t } = useTranslation('common')
+  const prefersReducedMotion = usePrefersReducedMotion()
   const revealContainer = useRef(null)
   const experiments = t('experiment-course.list', {
     returnObjects: true
   }) as ExperimentsProps[]
 
   useEffect(() => {
+    if (prefersReducedMotion) {
+      return
+    }
     async function animate() {
       if (revealContainer.current) {
         const sr = (await import('scrollreveal')).default

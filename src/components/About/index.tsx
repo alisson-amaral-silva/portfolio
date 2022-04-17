@@ -1,3 +1,4 @@
+import usePrefersReducedMotion from 'hooks/usePrefersReducedMotion'
 import Image from 'next/image'
 import { useEffect, useRef } from 'react'
 import { useTranslation } from 'react-i18next'
@@ -6,9 +7,13 @@ import * as S from './styles'
 
 const About = () => {
   const { t } = useTranslation('common')
+  const prefersReducedMotion = usePrefersReducedMotion()
   const revealContainer = useRef(null)
 
   useEffect(() => {
+    if (prefersReducedMotion) {
+      return
+    }
     async function animate() {
       if (revealContainer.current) {
         const sr = (await import('scrollreveal')).default
