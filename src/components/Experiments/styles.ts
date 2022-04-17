@@ -1,8 +1,6 @@
 import { darken } from 'polished'
 import styled, { css } from 'styled-components'
 
-export const Wrapper = styled.main``
-
 export const ExperimentsSection = styled.section``
 
 export const ExperimentsGridWrapper = styled.ul`
@@ -25,7 +23,7 @@ export const ExperimentWrapper = styled.li`
 
     @media (max-width: 768px) {
       box-shadow: 0 10px 30px -15px ${darken(0.1, theme.colors.primary)};
-      transition: var(--transition);
+      transition: ${theme.transition.all};
     }
 
     &:not(:last-of-type) {

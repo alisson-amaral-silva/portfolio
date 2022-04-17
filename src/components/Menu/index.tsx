@@ -9,6 +9,7 @@ import { useContext, useEffect, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import * as S from './styles'
 import { useRouter } from 'next/router'
+import { Helmet } from 'react-helmet'
 
 type LinkProps = {
   url: string
@@ -71,8 +72,9 @@ const Menu = () => {
         </S.LinkWrapper>
 
         <S.MenuWrapper>
-          <div className={isOpen ? 'blur' : ''} />
-
+          <Helmet>
+            <body className={isOpen ? 'blur' : ''} />
+          </Helmet>
           <div ref={wrapperRef}>
             <S.HamburguerButtonWrapper
               onClick={toggleMenu}
@@ -101,9 +103,12 @@ const Menu = () => {
                   </ol>
                 )}
                 <li>
-                  <a href={languageLink} className="change-language-link">
+                  <S.ChangeLinkWrapper
+                    href={languageLink}
+                    className="change-language-link"
+                  >
                     {t('change-language')}
-                  </a>
+                  </S.ChangeLinkWrapper>
                 </li>
                 <S.ThemeMobileWrapper>
                   <ThemeButton onClick={toggleTheme}>

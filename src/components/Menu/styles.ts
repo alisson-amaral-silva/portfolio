@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import { darken } from 'polished'
 import styled, { css } from 'styled-components'
 
@@ -9,15 +8,16 @@ export interface WrapperProps {
 
 export const Wrapper = styled.header<WrapperProps>`
   ${({ theme, scrollDirection, scrolledToTop }) => css`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     position: fixed;
     top: 0;
     z-index: 11;
+    padding: 0px 50px;
     width: 100%;
     height: 4.8rem;
-    backdrop-filter: blur(10px);
-    transition: ${theme.transition.all};
     background-color: ${theme.colors.mainBg};
-    backdrop-filter: blur(10px);
     filter: none !important;
     pointer-events: auto !important;
     user-select: auto !important;
@@ -27,26 +27,28 @@ export const Wrapper = styled.header<WrapperProps>`
     @media (max-width: 1080px) {
       padding: 0 40px;
     }
-    @media (max-width: 820px) {
+    @media (max-width: 1080px) {
       padding: 0;
     }
 
-    ${scrollDirection === 'up' &&
-    !scrolledToTop &&
-    css`
-      height: 4.8rem;
-      transform: translateY(0px);
-      background-color: ${theme.colors.mainBg};
-      box-shadow: 0 10px 30px -10px ${darken(0.1, theme.colors.primary)};
-    `};
+    @media (prefers-reduced-motion: no-preference) {
+      ${scrollDirection === 'up' &&
+      !scrolledToTop &&
+      css`
+        height: 4.8rem;
+        transform: translateY(0px);
+        background-color: ${theme.colors.mainBg};
+        box-shadow: 0 10px 30px -10px ${darken(0.1, theme.colors.primary)};
+      `};
 
-    ${scrollDirection === 'down' &&
-    !scrolledToTop &&
-    css`
-      height: 6.8rem;
-      transform: translateY(calc(6.8rem * -1));
-      box-shadow: 0 10px 30px -10px ${darken(0.1, theme.colors.primary)};
-    `};
+      ${scrollDirection === 'down' &&
+      !scrolledToTop &&
+      css`
+        height: 6.8rem;
+        transform: translateY(calc(6.8rem * -1));
+        box-shadow: 0 10px 30px -10px ${darken(0.1, theme.colors.primary)};
+      `};
+    }
   `}
 `
 
@@ -55,7 +57,7 @@ export const LinkWrapper = styled.div`
     display: flex;
     align-items: center;
 
-    @media (max-width: 820px) {
+    @media (max-width: 1080px) {
       display: none;
     }
 
@@ -74,6 +76,7 @@ export const LinkWrapper = styled.div`
         font-size: 16px;
 
         a {
+          padding: 10px;
           &:before {
             content: '0' counter(item) '.';
             margin-right: 5px;
@@ -148,7 +151,7 @@ export const RegisterBox = styled.div`
 export const MenuWrapper = styled.div`
   display: none;
 
-  @media (max-width: 820px) {
+  @media (max-width: 1080px) {
     display: block;
   }
 `
@@ -161,7 +164,7 @@ export const HamburguerButtonWrapper = styled.button<HamburguerProps>`
   ${({ theme, menuOpen }) => css`
     display: none;
 
-    @media (max-width: 820px) {
+    @media (max-width: 1080px) {
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -220,7 +223,7 @@ export const HamburguerButtonWrapper = styled.button<HamburguerProps>`
         top: ${menuOpen ? `0` : `-10px`};
         opacity: ${menuOpen ? 0 : 1};
         transition: ${menuOpen
-          ? 'bottom 0.1s ease-out'
+          ? 'top 0.1s ease-out, opacity 0.1s ease-out 0.12s'
           : 'top 0.1s ease-in 0.25s, opacity 0.1s ease-in'};
       }
       &:after {
@@ -228,8 +231,8 @@ export const HamburguerButtonWrapper = styled.button<HamburguerProps>`
         bottom: ${menuOpen ? `0` : `-10px`};
         transform: rotate(${menuOpen ? `-90deg` : `0`});
         transition: ${menuOpen
-          ? 'bottom 0.1s ease-out'
-          : 'top 0.1s ease-in 0.25s, opacity 0.1s ease-in'};
+          ? 'bottom 0.1s ease-out, transform 0.22s cubic-bezier(0.215, 0.61, 0.355, 1) 0.12s'
+          : 'bottom 0.1s ease-in 0.25s, transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19)'};
       }
     }
   `}
@@ -239,10 +242,11 @@ export const SidebarWrapper = styled.aside<TestHamburguer>`
   ${({ theme, menuOpen }) => css`
     display: none;
 
-    @media (max-width: 820px) {
+    @media (max-width: 1080px) {
       display: flex;
       flex-direction: column;
       align-items: center;
+      justify-content: center;
       position: fixed;
       top: 0;
       bottom: 0;
@@ -256,7 +260,7 @@ export const SidebarWrapper = styled.aside<TestHamburguer>`
       z-index: 9;
       transform: translateX(${menuOpen ? 0 : 100}vw);
       visibility: ${menuOpen ? 'visible' : 'hidden'};
-      transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+      transition: ${theme.transition.all};
     }
 
     nav {
@@ -281,7 +285,7 @@ export const SidebarWrapper = styled.aside<TestHamburguer>`
         counter-increment: item 1;
         font-size: clamp(14px, 4vw, 18px);
 
-        @media (max-width: 600px) {
+        @media (max-width: 1024px) {
           margin: 0 auto 10px;
         }
 
@@ -310,6 +314,9 @@ export const SidebarWrapper = styled.aside<TestHamburguer>`
         width: 100%;
         padding: 3px 20px 20px;
       }
+    }
+    li {
+      list-style: none;
     }
   `}
 `
@@ -368,7 +375,7 @@ export const NavWrapper = styled.nav`
 
         svg {
           fill: none;
-          transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+          transition: ${theme.transition.all};
           user-select: none;
         }
       }

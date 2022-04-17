@@ -19,10 +19,27 @@ export interface ExperimentsProps {
 const Experiments = () => {
   const { t } = useTranslation('common')
   const prefersReducedMotion = usePrefersReducedMotion()
-  const revealContainer = useRef(null)
+  const revealContainer = useRef([])
+  const revealTitle = useRef(null)
   const experiments = t('experiment-course.list', {
     returnObjects: true
   }) as ExperimentsProps[]
+
+  const revealObject = {
+    origin: 'bottom',
+    distance: '20px',
+    duration: 500,
+    delay: 200,
+    rotate: { x: 0, y: 0, z: 0 },
+    opacity: 0,
+    scale: 1,
+    easing: 'cubic-bezier(0.645, 0.045, 0.355, 1)',
+    mobile: true,
+    reset: false,
+    useDelay: 'always',
+    viewFactor: 0.25,
+    viewOffset: { top: 0, right: 0, bottom: 0, left: 0 }
+  }
 
   useEffect(() => {
     if (prefersReducedMotion) {
@@ -31,14 +48,18 @@ const Experiments = () => {
     async function animate() {
       if (revealContainer.current) {
         const sr = (await import('scrollreveal')).default
-        sr().reveal(revealContainer.current)
+        sr().reveal(revealTitle.current, revealObject)
+
+        revealContainer.current.forEach((ref, i) =>
+          sr().reveal(ref, revealObject)
+        )
       }
     }
     animate()
   }, [])
   return (
     <S.ExperimentsSection id="experiments">
-      <h4 className="numbered-heading" ref={revealContainer}>
+      <h4 className="numbered-heading" ref={revealTitle}>
         {t('experiment-course.title')}
       </h4>
       <S.ExperimentsGridWrapper>
@@ -47,7 +68,9 @@ const Experiments = () => {
             return (
               <S.ExperimentWrapper
                 key={i}
-                ref={(el) => (revealContainer.current[i] = el)}
+                ref={(el) =>
+                  revealContainer.current && (revealContainer.current[i] = el)
+                }
               >
                 <div className="project-content">
                   <div>

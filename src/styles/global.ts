@@ -140,12 +140,28 @@ const GlobalStyles: GlobalStyleComponent<
       background-color: ${theme.colors.mainBg};
       -moz-osx-font-smoothing: grayscale;
       -webkit-font-smoothing: antialiased;
+      margin: 0;
+      width: 100%;
+      min-height: 100%;
+      overflow-x: hidden;
 
-      #content > * {
-        filter: blur(5px) brightness(0.7);
-        transition: ${theme.transition.all};
-        pointer-events: none;
-        user-select: none;
+      &.hidden {
+        overflow: hidden;
+      }
+
+      &.blur {
+        overflow: hidden;
+
+        header {
+          background-color: transparent;
+        }
+
+        #content > * {
+          filter: blur(5px) brightness(0.7);
+          transition: ${theme.transition.all};
+          pointer-events: none;
+          user-select: none;
+        }
       }
 
       a {
@@ -226,21 +242,6 @@ const GlobalStyles: GlobalStyleComponent<
 
         &.hidden {
           overflow: hidden;
-        }
-
-        &.blur {
-          overflow: hidden;
-
-          header {
-            background-color: transparent;
-          }
-
-          #content > * {
-            filter: blur(5px) brightness(0.7);
-            transition: ${theme.transition.all};
-            pointer-events: none;
-            user-select: none;
-          }
         }
       }
 
@@ -335,21 +336,6 @@ const GlobalStyles: GlobalStyleComponent<
       &.fade-exit-active {
         opacity: 0;
         transition: opacity 300ms ${theme.transition.all};
-      }
-
-      &.blur {
-        overflow: hidden;
-
-        header {
-          background-color: transparent;
-        }
-
-        #content > * {
-          filter: blur(5px) brightness(0.7);
-          transition: ${theme.transition.all};
-          pointer-events: none;
-          user-select: none;
-        }
       }
     }
   `}
