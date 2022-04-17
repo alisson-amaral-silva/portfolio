@@ -8,6 +8,7 @@ import Link from 'next/link'
 import { useContext, useEffect, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import * as S from './styles'
+import { useRouter } from 'next/router'
 
 type LinkProps = {
   url: string
@@ -16,6 +17,7 @@ type LinkProps = {
 
 const Menu = () => {
   const { t } = useTranslation('common')
+  const { locale } = useRouter()
 
   const navLinks = t('navigation', { returnObjects: true }) as LinkProps[]
   const scrollDirection = useScrollDirection('down')
@@ -25,6 +27,7 @@ const Menu = () => {
   const toggleMenu = () => setIsOpen(!isOpen)
   const buttonRef = useRef(null)
   const navRef = useRef(null)
+  const languageLink = locale === 'en' ? '/pt' : '/en'
 
   const handleScroll = () => {
     setScrolledToTop(window.pageYOffset < 50)
@@ -53,6 +56,12 @@ const Menu = () => {
                   <S.MenuLink href={url}>{name}</S.MenuLink>
                 </li>
               ))}
+            <S.ChangeLinkWrapper
+              href={languageLink}
+              className="change-language-link"
+            >
+              {t('change-language')}
+            </S.ChangeLinkWrapper>
             <li>
               <ThemeButton onClick={toggleTheme}>
                 <SwitchColorIcon theme={theme}></SwitchColorIcon>
@@ -91,10 +100,11 @@ const Menu = () => {
                     ))}
                   </ol>
                 )}
-
-                {/* <a href="/resume.pdf" className="resume-link">
-                  Resume
-                </a> */}
+                <li>
+                  <a href={languageLink} className="change-language-link">
+                    {t('change-language')}
+                  </a>
+                </li>
                 <S.ThemeMobileWrapper>
                   <ThemeButton onClick={toggleTheme}>
                     <SwitchColorIcon theme={theme} />

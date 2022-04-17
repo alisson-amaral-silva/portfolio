@@ -5,6 +5,7 @@ import { Github } from '@styled-icons/feather/Github'
 import { Npm } from '@styled-icons/fa-brands/Npm'
 import Image from 'next/image'
 import usePrefersReducedMotion from 'hooks/usePrefersReducedMotion'
+import Icon from 'components/Icon'
 
 export interface ExperimentsProps {
   title: string
@@ -73,12 +74,12 @@ const Experiments = () => {
                     <div className="project-links">
                       {github && (
                         <a href={github} aria-label="GitHub Link">
-                          <Github name="GitHub" />
+                          <Icon name="GitHub" />
                         </a>
                       )}
                       {npm && (
                         <a href={npm} aria-label="Npm Link" className="npm">
-                          <Npm name="External" />
+                          <Icon name="Npm" />
                         </a>
                       )}
                     </div>

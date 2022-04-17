@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 export const Wrapper = styled.footer`
   display: flex;
@@ -13,9 +13,13 @@ export const Wrapper = styled.footer`
   text-align: center;
 `
 
-export const FooterText = styled(motion.div)``
+export const FooterText = styled(motion.div)`
+  ${({ theme }) => css`
+    color: ${theme.font.color};
+  `}
+`
 
 export const LogoWrapper = styled(motion.div)`
   height: 10px;
-  width: 15%auto;
+  width: 15%;
 `

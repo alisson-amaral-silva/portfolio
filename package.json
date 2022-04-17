@@ -28,6 +28,7 @@
     "./i18n.js"
   ],
   "dependencies": {
+    "@styled-icons/boxicons-logos": "^10.38.0",
     "@styled-icons/fa-brands": "^10.38.0",
     "@styled-icons/feather": "^10.34.0",
     "@styled-icons/material-outlined": "^10.34.0",

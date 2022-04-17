@@ -4,7 +4,7 @@ export const ContactSection = styled.section`
   ${({ theme }) => css`
     max-width: 600px;
     margin: 0 auto 100px;
-    min-height: 700px;
+    min-height: 600px;
     text-align: center;
 
     @media (max-width: 768px) {
