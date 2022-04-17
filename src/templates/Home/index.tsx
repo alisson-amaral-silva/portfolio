@@ -8,6 +8,7 @@ import { useTranslation } from 'react-i18next'
 import Base from 'templates/Base'
 import * as S from './styles'
 import HardSkills from 'components/HardSkills'
+import Experiments from 'components/Experiments'
 
 const Home = () => {
   const { t } = useTranslation('common')
@@ -36,6 +37,7 @@ const Home = () => {
         <About />
         <HardSkills />
         <Jobs />
+        <Experiments />
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ipsum

@@ -12,6 +12,7 @@ import SwitchColorIcon from 'components/SwitchColorIcon'
 import { TransitionGroup, CSSTransition } from 'react-transition-group'
 import useOnClickOutside from 'hooks/useOnClickOutside'
 import { useTranslation } from 'react-i18next'
+import { motion } from 'framer-motion'
 
 type LinkProps = {
   url: string
@@ -65,7 +66,7 @@ const Menu = () => {
               ))}
             <li>
               <ThemeButton onClick={toggleTheme}>
-                <SwitchColorIcon theme={theme} />
+                <SwitchColorIcon theme={theme}></SwitchColorIcon>
               </ThemeButton>
             </li>
           </ol>

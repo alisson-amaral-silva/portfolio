@@ -11,7 +11,7 @@
   "intro": "Sup! My name is Alisson and I enjoy creating various things on the internet. My interest in development started back in 2014 when I decided to create a few 3D things — turns out creating a few games taught me a few things about development so i got interested in!",
   "current-work": "My main focus these days is building accessible, inclusive, modern products with it's best practices and digital experiences at",
   "clients": "for a variety of clients.",
-  "front-end-intro":"I like to build screens with different, challenging and groundbreaking designs focusing on accessible and inclusive",
+  "front-end-intro": "I like to build screens with different, challenging and groundbreaking designs focusing on accessible and inclusive",
   "back-end-intro": "I started my career as a Front-end developer due to my curiosity it awaken my interest on back-end and i figure out that it's not that hard.",
   "languages": "Languages and platforms that I develop",
   "dev-tools": "Dev tools",
@@ -26,6 +26,51 @@
       "html": "<div><ul><li>Write modern, performant, maintainable code for a diverse array of client and internal projects</li><li>Work with a variety of different languages, platforms, frameworks, and content management systems such as JavaScript, TypeScript, React, Angular, Netlify, Sass, Next.JS, JQuery, Node.JS, Java, C#, .NET, etc</li><li>Communicate with multi-disciplinary teams of engineers, designers, producers, and clients on a daily basis</li></ul></div>"
     }
   ],
+  "experiment-course": {
+    "title": "Some Things I’ve Built/Studied",
+    "overline": "Built/Studied Project",
+    "list": [
+      {
+        "title": "Won Games",
+        "html": "<p>Um curso que cria um ecommerce chamado Won Games e ajuda a entender React, Heroku, NextJS, Jest, Storybook, Cypress, TypeScript, Styled Components, React Testing Library.</p>",
+        "techs": [
+          "NextJS",
+          "Jest",
+          "Storybook",
+          "Cypress",
+          "TypeScript",
+          "Styled Components",
+          "React Testing Library",
+          "React",
+          "Heroku"
+        ],
+        "image": "/img/won-games.png",
+        "github": "https://github.com/alisson-amaral-silva/won-games-client"
+      },
+      {
+        "title": "Banco do Alisson",
+        "html": "<p>Um curso que ajuda a entender Styled Components.</p>",
+        "techs": [
+          "React",
+          "Styled Components"
+        ],
+        "image": "/img/alisson-bank.png",
+        "github": "https://github.com/alisson-amaral-silva/styled-components-studies"
+      },
+      {
+        "title": "Material UI Phone Number TextField",
+        "html": "<p>Um componente que realizei um fork, adaptei às minhas necessidades e criei um pacote npm.</p>",
+        "techs": [
+          "React",
+          "Material UI 5",
+          "Emotion"
+        ],
+        "image": "/img/material-ui-phone-number-text-field.png",
+        "github": "https://github.com/alisson-amaral-silva/material-ui-phone-number-text-field",
+        "npm": "https://www.npmjs.com/package/@alisson-amaral/material-ui-phone-number-text-field"
+      }
+    ]
+  },
   "navigation": [
     {
       "name": "About",

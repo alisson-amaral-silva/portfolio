@@ -46,7 +46,7 @@ const About = () => {
               width={300}
               height={300}
               quality={100}
-              alt=""
+              alt="Alisson"
             />
           </div>
         </S.StyledPic>

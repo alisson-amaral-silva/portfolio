@@ -9,6 +9,8 @@ const SwitchColorIcon = ({ theme }: SwitchColorIconProps) => {
     <S.Icon
       src="/img/themeOn.svg"
       data-testid="light-mode"
+      whileHover={{ scale: 1.2 }}
+      whileTap={{ scale: 0.8 }}
       aria-label="Light mode"
       alt="Light Mode"
     />
@@ -16,6 +18,8 @@ const SwitchColorIcon = ({ theme }: SwitchColorIconProps) => {
     <S.Icon
       src="/img/themeOff.svg"
       data-testid="dark-mode"
+      whileHover={{ scale: 1.2 }}
+      whileTap={{ scale: 0.8 }}
       aria-label="Dark mode"
       alt="Dark Mode"
     />

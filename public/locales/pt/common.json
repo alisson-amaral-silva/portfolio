@@ -1,12 +1,12 @@
 {
-  "welcome":  {
-    "title":"Bem vindo"
+  "welcome": {
+    "title": "Bem vindo"
   },
   "loading": "Carregando",
-  "identity-black-img":"Máscara do Pantera Negra",
-  "identity-white-img":"Máscara do Killmonger",
+  "identity-black-img": "Máscara do Pantera Negra",
+  "identity-white-img": "Máscara do Killmonger",
   "greeting": "Olá, meu nome é",
-  "subtitle":"Eu sou um cara eclético que gosta de fazer coisas diferentes com muitas tecnologias.",
+  "subtitle": "Eu sou um cara eclético que gosta de fazer coisas diferentes com muitas tecnologias.",
   "opening": "Eu sou um desenvolvedor de software especializado em criar (e ocasionalmente design) com excepcionais experiências digitais. Atualmente, estou focado em desenvolver produtos acessiveis e centrado no ser humano na",
   "intro": "Oi! Meu nome é Alisson, eu gosto de criar diversas coisas na internet. Meu interesse em desenvolvimento começou em 2014, quando decidi criar algumas coisas em 3D - acabou que criar alguns jogos me ensinou algumas coisas sobre desenvolvimento, então me interessei!",
   "current-work": "Meu principal foco hoje em dia é criar produtos acessíveis, inclusivos, modernos, com os melhores padrões de desenvolvimento e esperiências digitais na",
@@ -26,6 +26,51 @@
       "html": "<div><ul><li>Escrever códigos modernos, performáticos e com foco em manutenibilidade para uma grande quantidade de clientes e projetos internos</li><li>Trabalhar com uma variedade de diferentes linguagens, plataformas, frameworks e gerenciamentos de conteúdo como JavaScript, TypeScript, React, Angular, Netlify, Sass, Next.JS, JQuery, Node.JS, Java, C#, .NET, etc.</li><li>Comunicar com um time multi disciplinar de engenheiros, designers e clientes no dia a dia</li></ul></div>"
     }
   ],
+  "experiment-course": {
+    "title": "Algumas coisas que criei/estudei",
+    "overline": "Projetos Criados/Estudos",
+    "list": [
+      {
+        "title": "Won Games",
+        "html": "<p>Um curso que cria um ecommerce chamado Won Games e ajuda a entender React, Heroku, NextJS, Jest, Storybook, Cypress, TypeScript, Styled Components, React Testing Library.</p>",
+        "techs": [
+          "NextJS",
+          "Jest",
+          "Storybook",
+          "Cypress",
+          "TypeScript",
+          "Styled Components",
+          "React Testing Library",
+          "React",
+          "Heroku"
+        ],
+        "image": "/img/won-games.png",
+        "github": "https://github.com/alisson-amaral-silva/won-games-client"
+      },
+      {
+        "title": "Banco do Alisson",
+        "html": "<p>Um curso que ajuda a entender Styled Components.</p>",
+        "techs": [
+          "React",
+          "Styled Components"
+        ],
+        "image": "/img/alisson-bank.png",
+        "github": "https://github.com/alisson-amaral-silva/styled-components-studies"
+      },
+      {
+        "title": "Material UI Phone Number TextField",
+        "html": "<p>Um componente que realizei um fork, adaptei às minhas necessidades e criei um pacote npm.</p>",
+        "techs": [
+          "React",
+          "Material UI 5",
+          "Emotion"
+        ],
+        "image": "/img/material-ui-phone-number-text-field.png",
+        "github": "https://github.com/alisson-amaral-silva/material-ui-phone-number-text-field",
+        "npm": "https://www.npmjs.com/package/@alisson-amaral/material-ui-phone-number-text-field"
+      }
+    ]
+  },
   "navigation": [
     {
       "name": "Sobre",

@@ -126,6 +126,53 @@ const GlobalStyles: GlobalStyleComponent<
       line-height: 1.3;
       background-color: ${theme.colors.mainBg};
 
+      a {
+        display: inline-block;
+        text-decoration: none;
+        text-decoration-skip-ink: auto;
+        color: inherit;
+        position: relative;
+        transition: ${theme.transition.all};
+
+        &:hover,
+        &:focus {
+          color: ${theme.colors.primary};
+        }
+
+        &.inline-link {
+          display: inline-block;
+          text-decoration: none;
+          text-decoration-skip-ink: auto;
+          position: relative;
+          transition: ${theme.transition.all};
+          color: ${theme.colors.primary};
+          &:hover,
+          &:focus,
+          &:active {
+            color: ${theme.colors.primary};
+            outline: 0;
+            &:after {
+              width: 100%;
+            }
+            & > * {
+              color: ${theme.colors.primary} !important;
+              transition: ${theme.transition.all};
+            }
+          }
+          &:after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 1px;
+            position: relative;
+            bottom: 0.37em;
+            background-color: ${theme.colors.primary};
+            transition: ${theme.transition.all};
+            opacity: 0.5;
+          }
+        }
+      }
+
       .company-link {
         color: ${theme.colors.primary};
         text-decoration: none;
