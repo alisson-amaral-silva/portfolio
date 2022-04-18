@@ -253,7 +253,7 @@ export const SidebarWrapper = styled.aside<TestHamburguer>`
       right: 0;
       padding: 50px 10px;
       width: min(75vw, 400px);
-      height: 100vh;
+      height: 102vh;
       outline: 0;
       background-color: ${theme.colors.mainBg};
       box-shadow: -10px 0px 30px -15px ${theme.colors.primary};

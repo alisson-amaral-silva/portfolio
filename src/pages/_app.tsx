@@ -13,7 +13,12 @@ function App({ Component, pageProps }: AppProps) {
           <title>Boilerplate</title>
           <link rel="shortcut icon" href="/img/icon-512.png" />
           <link rel="apple-touch-icon" href="/img/icon-512.png" />
-          <link rel="manifest" href="/manifest.json" />
+          <link
+            rel="manifest"
+            crossOrigin="use-credentials"
+            href="manifest.json"
+          />
+
           <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"

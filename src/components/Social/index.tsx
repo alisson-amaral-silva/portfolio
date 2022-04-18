@@ -14,21 +14,6 @@ const Social = () => {
   const socialMedias = t('socialMedias', {
     returnObjects: true
   }) as SocialProps[]
-
-  const variants = {
-    hidden: {
-      scale: 1,
-      opacity: 0
-    },
-    visible: {
-      scale: 1,
-      opacity: 1,
-      transition: {
-        delay: 1
-      }
-    }
-  }
-
   return (
     <>
       <Side orientation="left">

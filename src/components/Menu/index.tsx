@@ -5,10 +5,9 @@ import { ChangeLanguageContext } from 'context/ChangeLanguageContext'
 import { ChangeThemeContext } from 'context/ChangeThemeContext'
 import useOnClickOutside from 'hooks/useOnClickOutside'
 import useScrollDirection from 'hooks/useScrollDirection'
+import Head from 'next/head'
 import Link from 'next/link'
-import { useRouter } from 'next/router'
 import { useContext, useEffect, useRef, useState } from 'react'
-import { Helmet } from 'react-helmet'
 import { useTranslation } from 'react-i18next'
 import * as S from './styles'
 
@@ -45,6 +44,10 @@ const Menu = () => {
   const wrapperRef = useRef()
   useOnClickOutside(wrapperRef, () => setIsOpen(false))
 
+  useEffect(() => {
+    document.body.className = isOpen ? 'blur' : ''
+  }, [isOpen])
+
   return (
     <S.Wrapper scrollDirection={scrollDirection} scrolledToTop={scrolledToTop}>
       <S.NavWrapper>
@@ -73,9 +76,9 @@ const Menu = () => {
         </S.LinkWrapper>
 
         <S.MenuWrapper>
-          <Helmet>
+          <Head>
             <body className={isOpen ? 'blur' : ''} />
-          </Helmet>
+          </Head>
           <div ref={wrapperRef}>
             <S.HamburguerButtonWrapper
               onClick={toggleMenu}
