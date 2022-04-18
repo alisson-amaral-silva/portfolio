@@ -49,7 +49,7 @@
       },
       {
         "title": "Banco do Alisson",
-        "html": "<p>Um curso que ajuda a entender Styled Components.</p>",
+        "html": "<p>Conhecer Styled Components.</p>",
         "techs": ["React", "Styled Components"],
         "image": "/img/alisson-bank.png",
         "github": "https://github.com/alisson-amaral-silva/styled-components-studies"

@@ -32,7 +32,7 @@
     "list": [
       {
         "title": "Won Games",
-        "html": "<p>Um curso que cria um ecommerce chamado Won Games e ajuda a entender React, Heroku, NextJS, Jest, Storybook, Cypress, TypeScript, Styled Components, React Testing Library.</p>",
+        "html": "<p>A course that creates an ecommerce called Won games and it helps understand React, Heroku, NextJS, Jest, Storybook, Cypress, TypeScript, Styled Components, React Testing Library.</p>",
         "techs": [
           "NextJS",
           "Jest",
@@ -49,14 +49,14 @@
       },
       {
         "title": "Banco do Alisson",
-        "html": "<p>Um curso que ajuda a entender Styled Components.</p>",
+        "html": "<p>Get to know Styled Components.</p>",
         "techs": ["React", "Styled Components"],
         "image": "/img/alisson-bank.png",
         "github": "https://github.com/alisson-amaral-silva/styled-components-studies"
       },
       {
         "title": "Material UI Phone Number TextField",
-        "html": "<p>Um componente que realizei um fork, adaptei às minhas necessidades e criei um pacote npm.</p>",
+        "html": "<p>A component that i did a fork, adapt to my needs e create an npm package.</p>",
         "techs": ["React", "Material UI 5", "Emotion"],
         "image": "/img/material-ui-phone-number-text-field.png",
         "github": "https://github.com/alisson-amaral-silva/material-ui-phone-number-text-field",

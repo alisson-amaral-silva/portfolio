@@ -1,6 +1,7 @@
 import Logo from 'components/Logo'
 import SwitchColorIcon from 'components/SwitchColorIcon'
 import { ThemeButton } from 'components/ThemeButton'
+import { ChangeLanguageContext } from 'context/ChangeLanguageContext'
 import { ChangeThemeContext } from 'context/ChangeThemeContext'
 import useOnClickOutside from 'hooks/useOnClickOutside'
 import useScrollDirection from 'hooks/useScrollDirection'
@@ -18,17 +19,16 @@ type LinkProps = {
 
 const Menu = () => {
   const { t } = useTranslation('common')
-  const { locale } = useRouter()
 
   const navLinks = t('navigation', { returnObjects: true }) as LinkProps[]
   const scrollDirection = useScrollDirection('down')
   const [scrolledToTop, setScrolledToTop] = useState(true)
   const [isOpen, setIsOpen] = useState(false)
   const { toggleTheme, theme } = useContext(ChangeThemeContext)
+  const { toggleLanguage, language } = useContext(ChangeLanguageContext)
   const toggleMenu = () => setIsOpen(!isOpen)
   const buttonRef = useRef(null)
   const navRef = useRef(null)
-  const languageLink = locale === 'en' ? '/pt' : '/en'
 
   const handleScroll = () => {
     setScrolledToTop(window.pageYOffset < 50)
@@ -58,7 +58,8 @@ const Menu = () => {
                 </li>
               ))}
             <S.ChangeLinkWrapper
-              href={languageLink}
+              onClick={toggleLanguage}
+              href={`/${language}`}
               className="change-language-link"
             >
               {t('change-language')}
@@ -104,7 +105,8 @@ const Menu = () => {
                 )}
                 <li>
                   <S.ChangeLinkWrapper
-                    href={languageLink}
+                    onClick={toggleLanguage}
+                    href={`/${language}`}
                     className="change-language-link"
                   >
                     {t('change-language')}
