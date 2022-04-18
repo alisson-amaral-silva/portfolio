@@ -1,11 +1,11 @@
 import * as S from './styles'
 
 export interface SwitchColorIconProps {
-  theme: boolean
+  theme: 'light' | 'dark'
 }
 
 const SwitchColorIcon = ({ theme }: SwitchColorIconProps) => {
-  return theme ? (
+  return theme === 'light' ? (
     <S.Icon
       src="/img/themeOn.svg"
       data-testid="light-mode"

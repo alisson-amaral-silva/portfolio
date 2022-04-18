@@ -5,11 +5,11 @@ import { ChangeThemeContext } from 'context/ChangeThemeContext'
 import useOnClickOutside from 'hooks/useOnClickOutside'
 import useScrollDirection from 'hooks/useScrollDirection'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 import { useContext, useEffect, useRef, useState } from 'react'
+import { Helmet } from 'react-helmet'
 import { useTranslation } from 'react-i18next'
 import * as S from './styles'
-import { useRouter } from 'next/router'
-import { Helmet } from 'react-helmet'
 
 type LinkProps = {
   url: string

@@ -1,18 +1,18 @@
-import { ThemeProvider } from 'styled-components'
-import GlobalStyles from 'styles/global'
-import darkTheme from 'styles/darkTheme'
-import lightTheme from 'styles/lightTheme'
-import { useContext } from 'react'
-import { ChangeThemeContext } from 'context/ChangeThemeContext'
-import Social from 'components/Social'
-import * as S from './styles'
 import Email from 'components/Email'
+import Social from 'components/Social'
+import { ChangeThemeContext } from 'context/ChangeThemeContext'
+import { useContext } from 'react'
+import { ThemeProvider } from 'styled-components'
+import darkTheme from 'styles/darkTheme'
+import GlobalStyles from 'styles/global'
+import lightTheme from 'styles/lightTheme'
+import * as S from './styles'
 
-const ThemeSwitcher = ({ children }: React.ReactElement) => {
+const ThemeSwitcher = ({ children }) => {
   const { theme } = useContext(ChangeThemeContext)
 
   return (
-    <ThemeProvider theme={theme ? lightTheme : darkTheme}>
+    <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
       <GlobalStyles />
       <S.ContentWrapper>
         <Social />
