@@ -25,3 +25,9 @@ export const Illustration = styled.img`
 export const Content = styled.main`
   counter-reset: section;
 `
+
+export const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+`

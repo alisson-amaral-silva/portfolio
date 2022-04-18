@@ -30,7 +30,7 @@ const Home = () => {
     )
 
   return (
-    <>
+    <S.Wrapper>
       <Menu />
       <S.Content className="fillHeight">
         <Intro />
@@ -41,7 +41,7 @@ const Home = () => {
         <Contact />
         <Footer />
       </S.Content>
-    </>
+    </S.Wrapper>
   )
 }
 

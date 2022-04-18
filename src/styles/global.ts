@@ -58,7 +58,6 @@ const GlobalStyles: GlobalStyleComponent<
     html,
     body,
     #__next {
-      height: 100%;
       scroll-behavior: smooth;
     }
 
@@ -142,7 +141,6 @@ const GlobalStyles: GlobalStyleComponent<
       -webkit-font-smoothing: antialiased;
       margin: 0;
       width: 100%;
-      min-height: 100%;
       overflow-x: hidden;
 
       &.hidden {

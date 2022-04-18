@@ -242,6 +242,44 @@ export const SidebarWrapper = styled.aside<TestHamburguer>`
   ${({ theme, menuOpen }) => css`
     display: none;
 
+    height: 100vh;
+
+    @media only screen and (min-width: 375px) {
+      height: 135vh;
+    }
+
+    @media only screen and (min-width: 376px) and (max-width: 390px) {
+      height: 130vh;
+    }
+
+    @media only screen and (min-width: 392px) {
+      height: 130vh;
+    }
+
+    @media only screen and (min-width: 390px) and (min-width: 414px) {
+      height: 123vh;
+    }
+
+    @media only screen and (min-width: 411px) {
+      height: 122vh;
+    }
+
+    @media (max-width: 360px) {
+      height: 140vh;
+    }
+
+    @media (min-width: 1080px) {
+      height: 102vh;
+    }
+
+    @media only screen and (min-width: 540px) {
+      height: 102vh;
+    }
+
+    @media only screen and (min-width: 768px) {
+      height: 100vh;
+    }
+
     @media (max-width: 1080px) {
       display: flex;
       flex-direction: column;
@@ -253,7 +291,6 @@ export const SidebarWrapper = styled.aside<TestHamburguer>`
       right: 0;
       padding: 50px 10px;
       width: min(75vw, 400px);
-      height: 102vh;
       outline: 0;
       background-color: ${theme.colors.mainBg};
       box-shadow: -10px 0px 30px -15px ${theme.colors.primary};
