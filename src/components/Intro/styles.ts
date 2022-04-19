@@ -9,8 +9,13 @@ export const Wrapper = styled.section`
   padding: 0px;
   text-align: initial;
 
+  @media (max-width: 414px) {
+    min-height: 125vh;
+  }
+
   @media (max-width: 480px) and (min-height: 700px) {
     padding-bottom: 10vh;
+    min-height: 150vh;
   }
 `
 export const GreetingWrapper = styled.h1`
