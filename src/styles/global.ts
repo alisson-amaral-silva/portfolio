@@ -60,7 +60,7 @@ const GlobalStyles: GlobalStyleComponent<
     html,
     #__next {
       scroll-behavior: smooth;
-      min-width: 70vh;
+      min-width: 75vh;
     }
 
     body {

@@ -1,4 +1,6 @@
+import Icon from 'components/Icon'
 import Logo from 'components/Logo'
+import { SocialProps } from 'components/Social'
 import { useTranslation } from 'react-i18next'
 import * as S from './styles'
 
@@ -12,6 +14,9 @@ const Footer = () => {
       opacity: 0
     }
   }
+  const socialMedias = t('socialMedias', {
+    returnObjects: true
+  }) as SocialProps[]
 
   const handleTopEvent = () => {
     window.scrollTo(0, 0)
@@ -19,6 +24,18 @@ const Footer = () => {
 
   return (
     <S.Wrapper>
+      <S.SocialLinksWrapper>
+        <ul>
+          {socialMedias &&
+            socialMedias.map(({ name, url }, i) => (
+              <li key={i}>
+                <a href={url} aria-label={name}>
+                  <Icon name={name} />
+                </a>
+              </li>
+            ))}
+        </ul>
+      </S.SocialLinksWrapper>
       <S.LogoWrapper
         onClick={handleTopEvent}
         layout

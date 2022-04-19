@@ -21,5 +21,36 @@ export const FooterText = styled(motion.div)`
 
 export const LogoWrapper = styled(motion.div)`
   height: 10px;
-  width: 15%;
+  max-width: 270px;
+`
+
+export const SocialLinksWrapper = styled.div`
+  ${({ theme }) => css`
+    display: none;
+
+    @media (max-width: 768px) {
+      display: block;
+      width: 100%;
+      max-width: 270px;
+      margin: 0 auto 10px;
+      color: ${theme.font.color};
+    }
+
+    ul {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+
+      a {
+        padding: 10px;
+        svg {
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+  `}
 `
