@@ -5,8 +5,6 @@ export const SocialListWrapper = styled.ul`
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0;
-    padding: 0;
     list-style: none;
 
     &:after {
@@ -30,6 +28,7 @@ export const SocialListWrapper = styled.ul`
         &:hover,
         &:focus {
           transform: translateY(-3px);
+          color: ${theme.colors.primary};
         }
 
         svg {

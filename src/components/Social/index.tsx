@@ -1,19 +1,17 @@
-import Icon from 'components/Icon'
+import Icon, { IconProps } from 'components/Icon'
 import Side from 'components/Side'
-import { motion } from 'framer-motion'
-import { useTranslation } from 'react-i18next'
 import * as S from './styles'
 
-export interface SocialProps {
+export interface SocialList {
   url: string
-  name: string
+  name: 'Npm' | 'GitHub' | 'Instagram' | 'Linkedin'
 }
 
-const Social = () => {
-  const { t } = useTranslation('common')
-  const socialMedias = t('socialMedias', {
-    returnObjects: true
-  }) as SocialProps[]
+export interface SocialProps {
+  socialMedias: SocialList[]
+}
+
+const Social = ({ socialMedias }: SocialProps) => {
   return (
     <>
       <Side orientation="left">

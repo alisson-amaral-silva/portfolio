@@ -1,152 +1,4 @@
-import { darken } from 'polished'
 import styled, { css } from 'styled-components'
-
-export interface WrapperProps {
-  scrollDirection: string
-  scrolledToTop: any
-}
-
-export const Wrapper = styled.header<WrapperProps>`
-  ${({ theme, scrollDirection, scrolledToTop }) => css`
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    z-index: 11;
-    padding: 0px 50px;
-    width: 100%;
-    height: 4.8rem;
-    background-color: ${theme.colors.mainBg};
-    filter: none !important;
-    pointer-events: auto !important;
-    user-select: auto !important;
-    backdrop-filter: blur(10px);
-    transition: ${theme.transition.all};
-
-    @media (max-width: 1080px) {
-      padding: 0 40px;
-    }
-    @media (max-width: 1080px) {
-      padding: 0;
-    }
-
-    @media (prefers-reduced-motion: no-preference) {
-      ${scrollDirection === 'up' &&
-      !scrolledToTop &&
-      css`
-        height: 4.8rem;
-        transform: translateY(0px);
-        background-color: ${theme.colors.mainBg};
-        box-shadow: 0 10px 30px -10px ${darken(0.1, theme.colors.primary)};
-      `};
-
-      ${scrollDirection === 'down' &&
-      !scrolledToTop &&
-      css`
-        height: 6.8rem;
-        transform: translateY(calc(6.8rem * -1));
-        box-shadow: 0 10px 30px -10px ${darken(0.1, theme.colors.primary)};
-      `};
-    }
-  `}
-`
-
-export const LinkWrapper = styled.div`
-  ${({ theme }) => css`
-    display: flex;
-    align-items: center;
-
-    @media (max-width: 1080px) {
-      display: none;
-    }
-
-    ol {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0;
-      margin: 0;
-      list-style: none;
-
-      li {
-        margin: 0 5px;
-        position: relative;
-        counter-increment: item 1;
-        font-size: 16px;
-
-        a {
-          padding: 10px;
-          &:before {
-            content: '0' counter(item) '.';
-            margin-right: 5px;
-            color: ${theme.colors.primary};
-            font-size: 16px;
-            text-align: right;
-          }
-        }
-      }
-    }
-  `}
-`
-
-export const LogoWrapper = styled.a`
-  ${({ theme }) => css`
-    &.logo {
-      font-size: 1.5rem;
-      color: ${theme.font.color};
-      letter-spacing: 1px;
-    }
-    &.logo span {
-      color: ${theme.colors.primary};
-    }
-  `}
-`
-
-export const MenuLink = styled.a`
-  ${({ theme }) => css`
-    position: relative;
-    color: ${theme.font.color};
-    font-size: clamp(14px, 4vw, 18px);
-    margin: 0.3rem 1.4rem 0;
-    text-decoration: none;
-    text-align: center;
-    &:hover {
-      &::after {
-        content: '';
-        position: absolute;
-        display: block;
-        height: 0.1rem;
-        background-color: ${theme.colors.primary};
-        animation: hoverAnimation 0.2s forwards;
-      }
-      @keyframes hoverAnimation {
-        from {
-          width: 0;
-          left: 50%;
-        }
-        to {
-          width: 100%;
-          left: 0;
-        }
-      }
-    }
-  `}
-`
-
-export const RegisterBox = styled.div`
-  ${({ theme }) => css`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0 ${theme.spacings.xlarge} ${theme.spacings.xlarge};
-    > span {
-      display: block;
-      margin: ${theme.spacings.xxsmall} 0;
-      font-size: ${theme.font.sizes.xsmall};
-    }
-  `}
-`
 
 export const MenuWrapper = styled.div`
   display: none;
@@ -238,7 +90,7 @@ export const HamburguerButtonWrapper = styled.button<HamburguerProps>`
   `}
 `
 
-export const SidebarWrapper = styled.aside<TestHamburguer>`
+export const SidebarWrapper = styled.aside<HamburguerProps>`
   ${({ theme, menuOpen }) => css`
     display: none;
 
@@ -249,27 +101,27 @@ export const SidebarWrapper = styled.aside<TestHamburguer>`
     }
 
     @media only screen and (min-width: 376px) and (max-width: 390px) {
-      height: 130vh;
+      height: 170vh;
     }
 
     @media only screen and (min-width: 392px) {
-      height: 130vh;
+      height: 170vh;
     }
 
     @media only screen and (min-width: 390px) and (min-width: 414px) {
-      height: 123vh;
+      height: 163vh;
     }
 
     @media only screen and (min-width: 411px) {
-      height: 122vh;
+      height: 170vh;
     }
 
     @media (max-width: 360px) {
-      height: 140vh;
+      height: 154vh;
     }
 
     @media (min-width: 1080px) {
-      height: 102vh;
+      height: 142vh;
     }
 
     @media only screen and (min-width: 540px) {
@@ -278,6 +130,14 @@ export const SidebarWrapper = styled.aside<TestHamburguer>`
 
     @media only screen and (min-width: 768px) {
       height: 100vh;
+    }
+
+    @media only screen and (min-width: 769px) {
+      height: 110vh;
+    }
+
+    @media only screen and (min-width: 912px) {
+      height: 114vh;
     }
 
     @media (max-width: 1080px) {
@@ -382,41 +242,6 @@ export const ChangeLinkWrapper = styled.a`
     padding: 18px 50px;
     width: max-content;
     margin: 0.3rem 1.4rem 0;
-  `}
-`
-
-export const NavWrapper = styled.nav`
-  ${({ theme }) => css`
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-    width: 100%;
-    color: ${theme.colors.primary};
-    counter-reset: item 0;
-    z-index: 12;
-    padding: 1rem 2rem;
-
-    .logo {
-      a {
-        color: ${theme.colors.primary};
-        width: 42px;
-        height: 42px;
-
-        &:hover,
-        &:focus {
-          svg {
-            color: ${theme.colors.primary};
-          }
-        }
-
-        svg {
-          fill: none;
-          transition: ${theme.transition.all};
-          user-select: none;
-        }
-      }
-    }
   `}
 `
 

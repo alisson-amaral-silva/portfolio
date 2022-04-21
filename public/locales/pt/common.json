@@ -16,7 +16,13 @@
   "languages": "Linguagens que eu desenvolvo",
   "dev-tools": "Ferramentas de desenvolvimento",
   "company": "Iteris",
-  "work-title": "Aonde já trabalhei",
+  "session": {
+    "about": "Sobre Mim",
+    "hard-skills": "Hard Skills",
+    "work": "Aonde já trabalhei",
+    "experiments": "Algumas coisas que criei/estudei",
+    "contact": "Quais são os próximos passos?"
+  },
   "job": [
     {
       "company": "Iteris",
@@ -27,7 +33,6 @@
     }
   ],
   "experiment-course": {
-    "title": "Algumas coisas que criei/estudei",
     "overline": "Projetos Criados/Estudos",
     "list": [
       {
@@ -65,7 +70,6 @@
     ]
   },
   "contact": {
-    "session": "Quais são os próximos passos?",
     "title": "Entre em contato",
     "text": "Minha caixa de entrada está sempre aberta, tanto para perguntas ou apenas para dizer um oi, tentarei o meu melhor para entrar em contato contigo!",
     "button-message": "Diga um Oi!"

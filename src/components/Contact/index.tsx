@@ -22,7 +22,7 @@ const Contact = () => {
   }, [])
   return (
     <S.ContactSection id="contact">
-      <h2 className="numbered-heading overline">{t('contact.session')}</h2>
+      <h2 className="numbered-heading overline">{t('session.contact')}</h2>
 
       <h2 className="title">{t('contact.title')}</h2>
 

@@ -60,7 +60,7 @@ const Experiments = () => {
   return (
     <S.ExperimentsSection id="experiments">
       <h4 className="numbered-heading" ref={revealTitle}>
-        {t('experiment-course.title')}
+        {t('session.experiment')}
       </h4>
       <S.ExperimentsGridWrapper>
         {experiments &&

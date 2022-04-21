@@ -1,12 +1,18 @@
 import { ThemeProvider } from 'styled-components'
 import GlobalStyles from '../src/styles/global'
-import theme from '../src/styles/theme'
+import { useDarkMode } from 'storybook-dark-mode'
+import darkTheme from '../src/styles/darkTheme'
+import lightTheme from '../src/styles/lightTheme'
 
 export const decorators = [
-  (Story) => (
-    <ThemeProvider theme={theme}>
-      <GlobalStyles />
-      <Story />
-    </ThemeProvider>
-  ),
-];
+  (Story) => {
+    const currentTheme = useDarkMode() ? darkTheme : lightTheme
+
+    return (
+      <ThemeProvider theme={currentTheme}>
+        <GlobalStyles />
+        <Story />
+      </ThemeProvider>
+    )
+  }
+]

@@ -6,4 +6,8 @@ export default {
   component: Loading
 } as Meta
 
-export const Basic: Story = () => <Loading />
+export const Default: Story = () => (
+  <div style={{ display: 'flex', justifyContent: 'center' }}>
+    <Loading />
+  </div>
+)

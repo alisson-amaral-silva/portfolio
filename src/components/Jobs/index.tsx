@@ -75,7 +75,7 @@ const Jobs = () => {
   }
   return (
     <S.JobsSection id="jobs" ref={revealContainer}>
-      <h4 className="numbered-heading">{t('work-title')}</h4>
+      <h4 className="numbered-heading">{t('session.work')}</h4>
       <div className="inner">
         <S.TabListWrapper
           role="tablist"

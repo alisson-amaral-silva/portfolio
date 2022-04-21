@@ -16,7 +16,13 @@
   "languages": "Languages and platforms that I develop",
   "dev-tools": "Dev tools",
   "company": "Iteris",
-  "work-title": "Where I have Worked",
+  "session": {
+    "about": "About Me",
+    "hard-skills": "Hard Skills",
+    "work": "Where I have Worked",
+    "experiments": "Some Things I’ve Built/Studied",
+    "contact": "What’s Next?"
+  },
   "job": [
     {
       "company": "Iteris",
@@ -27,7 +33,6 @@
     }
   ],
   "experiment-course": {
-    "title": "Some Things I’ve Built/Studied",
     "overline": "Built/Studied Project",
     "list": [
       {

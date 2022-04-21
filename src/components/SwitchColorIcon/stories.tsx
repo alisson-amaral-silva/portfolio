@@ -1,9 +1,18 @@
 import { Meta, Story } from '@storybook/react/types-6-0'
-import SwitchColorIcon from '.'
+import SwitchColorIcon, { SwitchColorIconProps } from '.'
 
 export default {
   title: 'SwitchColorIcon',
-  component: SwitchColorIcon
+  component: SwitchColorIcon,
+  argTypes: {
+    theme: {
+      options: ['light', 'dark']
+    }
+  }
 } as Meta
 
-export const Basic: Story = () => <SwitchColorIcon />
+export const Default: Story<SwitchColorIconProps> = (args) => (
+  <SwitchColorIcon {...args} />
+)
+
+Default.args = { theme: 'light' }

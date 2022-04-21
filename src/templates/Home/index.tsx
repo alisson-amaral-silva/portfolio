@@ -6,7 +6,7 @@ import HardSkills from 'components/HardSkills'
 import Intro from 'components/Intro'
 import Jobs from 'components/Jobs'
 import Loading from 'components/Loading'
-import Menu from 'components/Menu'
+import Nav from 'components/Nav'
 import { useEffect, useState } from 'react'
 import Base from 'templates/Base'
 import * as S from './styles'
@@ -31,7 +31,7 @@ const Home = () => {
 
   return (
     <S.Wrapper>
-      <Menu />
+      <Nav />
       <S.Content className="fillHeight">
         <Intro />
         <About />

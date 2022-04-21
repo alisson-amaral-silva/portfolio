@@ -27,6 +27,7 @@ export const EmailLinkWrapper = styled.div`
       &:hover,
       &:focus {
         transform: translateY(-3px);
+        color: ${theme.colors.primary};
       }
     }
   `}

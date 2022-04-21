@@ -45,7 +45,7 @@ const HardSkills = () => {
 
   return (
     <S.HardSkillsSection id="hard-skills" ref={revealContainer}>
-      <h3 className="numbered-heading">HardSkills</h3>
+      <h3 className="numbered-heading">{t('session.hard-skills')}</h3>
       <S.HardSkillsWrapper>
         <S.HardSkillsBox>
           <S.FrontEndWrapper>

@@ -25,7 +25,7 @@ const About = () => {
 
   return (
     <S.AboutSection id="about" ref={revealContainer}>
-      <h2 className="numbered-heading">About Me</h2>
+      <h2 className="numbered-heading">{t('session.about')}</h2>
       <div className="inner">
         <div>
           <S.AboutParagraph> {t('intro')}</S.AboutParagraph>
