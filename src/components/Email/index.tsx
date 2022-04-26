@@ -10,7 +10,9 @@ const Email = ({ orientation, email }: EmailProps) => {
   return (
     <Side orientation={orientation}>
       <S.EmailLinkWrapper>
-        <a href={`mailto:${email}`}>{email}</a>
+        <a data-testid="email" href={`mailto:${email}`}>
+          {email}
+        </a>
       </S.EmailLinkWrapper>
     </Side>
   )

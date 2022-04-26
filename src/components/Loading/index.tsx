@@ -10,6 +10,7 @@ const Loading = () => {
     <StyledLottie
       role="progressbar"
       aria-busy
+      data-testid="loading"
       aria-label={t('loading')}
       animationData={lottieJson}
       play

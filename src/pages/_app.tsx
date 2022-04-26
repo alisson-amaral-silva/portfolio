@@ -10,7 +10,7 @@ function App({ Component, pageProps }: AppProps) {
     <ChangeThemeProvider>
       <ChangeLanguageProvider>
         <Head>
-          <title>Boilerplate</title>
+          <title>Portfolio</title>
           <link rel="shortcut icon" href="/img/icon-512.png" />
           <link rel="apple-touch-icon" href="/img/icon-512.png" />
           <link
@@ -23,10 +23,7 @@ function App({ Component, pageProps }: AppProps) {
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
           />
-          <meta
-            name="description"
-            content="A simple project starter to work with Typescript, react, nextJS and Styled Components"
-          />
+          <meta name="description" content="A simple portfolio" />
         </Head>
         <Component {...pageProps} />
       </ChangeLanguageProvider>

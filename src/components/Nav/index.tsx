@@ -43,13 +43,13 @@ const Nav = () => {
                   <S.MenuLink href={url}>{name}</S.MenuLink>
                 </li>
               ))}
-            <ChangeLinkWrapper
+            {/* <ChangeLinkWrapper
               onClick={toggleLanguage}
               href={`/${language}`}
               className="change-language-link"
             >
               {t('change-language')}
-            </ChangeLinkWrapper>
+            </ChangeLinkWrapper> */}
             <li>
               <ThemeButton onClick={toggleTheme}>
                 <SwitchColorIcon theme={theme}></SwitchColorIcon>

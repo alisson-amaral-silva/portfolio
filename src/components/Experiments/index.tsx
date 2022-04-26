@@ -1,11 +1,9 @@
+import Icon from 'components/Icon'
+import usePrefersReducedMotion from 'hooks/usePrefersReducedMotion'
+import Image from 'next/image'
 import { useEffect, useRef } from 'react'
 import { useTranslation } from 'react-i18next'
 import * as S from './styles'
-import { Github } from '@styled-icons/feather/Github'
-import { Npm } from '@styled-icons/fa-brands/Npm'
-import Image from 'next/image'
-import usePrefersReducedMotion from 'hooks/usePrefersReducedMotion'
-import Icon from 'components/Icon'
 
 export interface ExperimentsProps {
   title: string
@@ -102,7 +100,7 @@ const Experiments = () => {
                       )}
                       {npm && (
                         <a href={npm} aria-label="Npm Link" className="npm">
-                          <Icon name="Npm" />
+                          <Icon />
                         </a>
                       )}
                     </div>

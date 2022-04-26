@@ -1,14 +1,10 @@
-import { render, screen } from '@testing-library/react'
-import Loading  from '.'
+import { render, screen } from 'utils/test-utils'
+import Loading from '.'
 
 describe('<Loading  />', () => {
-  it('should render the heading', () => {
-    const { container } = render(<Loading  />)
-    expect(
-      screen.getByRole('heading', { name: /Loading /i })
-    ).toBeInTheDocument()
+  it('Should render correctly', () => {
+    render(<Loading />)
 
-    expect(container.firstChild).toMatchSnapshot()
+    expect(screen.getByTestId(/loading/i)).toBeInTheDocument()
   })
-
 })

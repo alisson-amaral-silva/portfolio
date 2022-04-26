@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react'
+import { render, screen } from 'utils/test-utils'
 import MediaMatch from '.'
 
 describe('<MediaMatch  />', () => {
@@ -29,10 +29,10 @@ describe('<MediaMatch  />', () => {
   })
 
   it('should show or hide based on the media passed', () => {
-    expect(desktopHeading.parentElement).toHaveStyleRule('display', 'block', {
+    expect(desktopHeading.parentElement).toHaveStyleRule('display', 'flex', {
       media: '(min-width: 768px)'
     })
-    expect(mobileHeading.parentElement).toHaveStyleRule('display', 'block', {
+    expect(mobileHeading.parentElement).toHaveStyleRule('display', 'flex', {
       media: '(max-width: 768px)'
     })
   })

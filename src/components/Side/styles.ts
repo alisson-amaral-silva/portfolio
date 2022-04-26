@@ -6,7 +6,7 @@ export interface SideElementProps {
 
 export const SideElementWrapper = styled.div<SideElementProps>`
   ${({ theme, orientation }) => css`
-    width: 40px;
+    width: 70px;
     position: fixed;
     bottom: 0;
     left: ${orientation === 'left' ? '40px' : 'auto'};

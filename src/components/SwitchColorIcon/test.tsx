@@ -1,11 +1,14 @@
-import { render, screen } from '@testing-library/react'
-import SwitchColorIcon  from '.'
+import { render, screen } from 'utils/test-utils'
+import SwitchColorIcon from '.'
 
 describe('<SwitchColorIcon  />', () => {
-  it('should render the heading', () => {
-    expect(
-      screen.getByRole('heading', { name: /SwitchColorIcon /i })
-    ).toBeInTheDocument()
+  it('should render the SwitchColorIcon component with the light as current mode', () => {
+    render(<SwitchColorIcon theme="light" />)
+    expect(screen.getByTestId('light-mode')).toBeInTheDocument()
   })
 
+  it('should render the SwitchColorIcon component with the dark as current mode', () => {
+    render(<SwitchColorIcon theme="dark" />)
+    expect(screen.getByTestId('dark-mode')).toBeInTheDocument()
+  })
 })

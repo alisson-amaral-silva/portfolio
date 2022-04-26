@@ -16,10 +16,10 @@ export function ChangeLanguageProvider({ children }) {
   const [language, setLanguage] = useState<string>('pt')
 
   const toggleLanguage = () => {
-    locale === 'en' ? setMode('pt') : setMode('en')
+    locale === 'en' ? setLanguageMode('pt') : setLanguageMode('en')
   }
 
-  const setMode = (mode: string) => {
+  const setLanguageMode = (mode: string) => {
     setCookie(null, 'USER_LANGUAGE', mode, {
       maxAge: 86400 * 7,
       path: '/'
@@ -29,7 +29,7 @@ export function ChangeLanguageProvider({ children }) {
 
   useEffect(() => {
     const cookies = parseCookies()
-    const localTheme = cookies.USER_THEME
+    const localTheme = cookies.USER_LANGUAGE
     localTheme && setLanguage(localTheme)
   }, [])
 
