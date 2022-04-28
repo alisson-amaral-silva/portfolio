@@ -6,15 +6,19 @@ import { useTranslation } from 'react-i18next'
 const Loading = () => {
   const { t } = useTranslation('common')
 
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: lottieJson
+  }
+
   return (
     <StyledLottie
-      role="progressbar"
       aria-busy
       data-testid="loading"
       aria-label={t('loading')}
-      animationData={lottieJson}
-      play
-      loop
+      options={defaultOptions}
+      style={{ width: '30%', height: '50%' }}
     />
   )
 }

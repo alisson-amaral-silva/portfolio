@@ -1,5 +1,5 @@
 import usePrefersReducedMotion from 'hooks/usePrefersReducedMotion'
-import { useEffect, useRef, useState } from 'react'
+import { MutableRefObject, useEffect, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { CSSTransition } from 'react-transition-group'
 import { KEY_CODES } from 'utils/constants'
@@ -16,8 +16,8 @@ export interface JobProps {
 const Jobs = () => {
   const [activeTabId, setActiveTabId] = useState(0)
   const [tabFocus, setTabFocus] = useState<any>(null)
-  const tabs = useRef([])
-  const revealContainer = useRef(null)
+  const tabs = useRef<any[]>([])
+  const revealContainer = useRef<any>(null)
   const prefersReducedMotion = usePrefersReducedMotion()
   const { t } = useTranslation('common')
   const jobs = t('job', { returnObjects: true }) as JobProps[]

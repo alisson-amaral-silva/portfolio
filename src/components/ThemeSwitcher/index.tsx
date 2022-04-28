@@ -1,6 +1,7 @@
 import Email from 'components/Email'
 import Social, { SocialList } from 'components/Social'
 import { ChangeThemeContext } from 'context/ChangeThemeContext'
+import React from 'react'
 import { useContext } from 'react'
 import { useTranslation } from 'react-i18next'
 import { ThemeProvider } from 'styled-components'
@@ -9,7 +10,11 @@ import GlobalStyles from 'styles/global'
 import lightTheme from 'styles/lightTheme'
 import * as S from './styles'
 
-const ThemeSwitcher = ({ children }) => {
+export interface ThemeSwitcherProps {
+  children: React.ReactNode
+}
+
+const ThemeSwitcher = ({ children }: ThemeSwitcherProps) => {
   const { theme } = useContext(ChangeThemeContext)
   const { t } = useTranslation('common')
   const socialMedias = t('socialMedias', {
@@ -17,7 +22,9 @@ const ThemeSwitcher = ({ children }) => {
   }) as SocialList[]
 
   return (
-    <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
+    <ThemeProvider
+      theme={theme === 'light' ? (lightTheme as any) : (darkTheme as any)}
+    >
       <GlobalStyles />
       <S.ContentWrapper>
         <Social socialMedias={socialMedias} />

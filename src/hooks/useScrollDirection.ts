@@ -13,7 +13,7 @@ const useScrollDirection = ({
   initialDirection,
   thresholdPixels,
   off
-} = {}) => {
+}: UseScrollDirectionProps) => {
   const [scrollDir, setScrollDir] = useState(initialDirection)
 
   useEffect(() => {

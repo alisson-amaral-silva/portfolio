@@ -10,7 +10,7 @@ export default function Index() {
   )
 }
 
-export async function getServerSideProps(context) {
+export async function getServerSideProps(context: any) {
   return {
     props: {
       ...(await serverSideTranslations(context.locale, ['common']))

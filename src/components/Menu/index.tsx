@@ -3,7 +3,9 @@ import SwitchColorIcon from 'components/SwitchColorIcon'
 import { ThemeButton } from 'components/ThemeButton'
 import { ChangeLanguageContext } from 'context/ChangeLanguageContext'
 import { ChangeThemeContext } from 'context/ChangeThemeContext'
-import useOnClickOutside from 'hooks/useOnClickOutside'
+import useOnClickOutside, {
+  UseOnClickOutsideProps
+} from 'hooks/useOnClickOutside'
 import useScrollDirection from 'hooks/useScrollDirection'
 import Head from 'next/head'
 import Link from 'next/link'
@@ -30,8 +32,14 @@ const Menu = ({ navLinks }: MenuProps) => {
   const buttonRef = useRef(null)
   const navRef = useRef(null)
 
-  const wrapperRef = useRef()
-  useOnClickOutside(wrapperRef, () => setIsOpen(false))
+  const wrapperRef = useRef<any>()
+
+  const useOnClickInitialProps: UseOnClickOutsideProps = {
+    ref: wrapperRef,
+    handler: () => setIsOpen(false)
+  }
+
+  useOnClickOutside(useOnClickInitialProps)
 
   useEffect(() => {
     document.body.className = isOpen ? 'blur' : ''

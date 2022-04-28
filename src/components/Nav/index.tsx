@@ -1,5 +1,7 @@
 import Menu, { LinkProps } from 'components/Menu'
-import useScrollDirection from 'hooks/useScrollDirection'
+import useScrollDirection, {
+  UseScrollDirectionProps
+} from 'hooks/useScrollDirection'
 import { useContext, useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import * as S from './styles'
@@ -14,7 +16,12 @@ const Nav = () => {
   const { t } = useTranslation('common')
 
   const navLinks = t('navigation', { returnObjects: true }) as LinkProps[]
-  const scrollDirection = useScrollDirection('down')
+  const scrollDirectionInitialProps: UseScrollDirectionProps = {
+    initialDirection: 'down',
+    thresholdPixels: 0,
+    off: false
+  }
+  const scrollDirection = useScrollDirection(scrollDirectionInitialProps)
   const [scrolledToTop, setScrolledToTop] = useState(true)
   const { toggleTheme, theme } = useContext(ChangeThemeContext)
   const { toggleLanguage, language } = useContext(ChangeLanguageContext)

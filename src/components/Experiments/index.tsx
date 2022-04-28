@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-non-null-assertion */
 import Icon from 'components/Icon'
 import usePrefersReducedMotion from 'hooks/usePrefersReducedMotion'
 import Image from 'next/image'
@@ -17,7 +18,7 @@ export interface ExperimentsProps {
 const Experiments = () => {
   const { t } = useTranslation('common')
   const prefersReducedMotion = usePrefersReducedMotion()
-  const revealContainer = useRef([])
+  const revealContainer = useRef<any>([])
   const revealTitle = useRef(null)
   const experiments = t('experiment-course.list', {
     returnObjects: true
@@ -46,10 +47,11 @@ const Experiments = () => {
     async function animate() {
       if (revealContainer.current) {
         const sr = (await import('scrollreveal')).default
-        sr().reveal(revealTitle.current, revealObject)
+        sr().reveal(revealTitle!.current!, revealObject)
 
-        revealContainer.current.forEach((ref, i) =>
-          sr().reveal(ref, revealObject)
+        revealContainer.current.forEach(
+          (ref: string | HTMLElement | NodeListOf<Element>) =>
+            sr().reveal(ref, revealObject)
         )
       }
     }
@@ -66,9 +68,7 @@ const Experiments = () => {
             return (
               <S.ExperimentWrapper
                 key={i}
-                ref={(el) =>
-                  revealContainer.current && (revealContainer.current[i] = el)
-                }
+                ref={(el) => (revealContainer.current[i] = el)}
               >
                 <div className="project-content">
                   <div>

@@ -7,11 +7,17 @@ type ChangeLanguageContextType = {
   toggleLanguage: () => void
 }
 
+type ChangeLanguageProviderProps = {
+  children: React.ReactNode
+}
+
 export const ChangeLanguageContext = createContext(
   {} as ChangeLanguageContextType
 )
 
-export function ChangeLanguageProvider({ children }) {
+export function ChangeLanguageProvider({
+  children
+}: ChangeLanguageProviderProps) {
   const { locale } = useRouter()
   const [language, setLanguage] = useState<string>('pt')
 

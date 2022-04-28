@@ -1,6 +1,6 @@
 import Icon from 'components/Icon'
 import Logo from 'components/Logo'
-import { SocialProps } from 'components/Social'
+import { SocialList } from 'components/Social'
 import { useTranslation } from 'react-i18next'
 import * as S from './styles'
 
@@ -16,7 +16,7 @@ const Footer = () => {
   }
   const socialMedias = t('socialMedias', {
     returnObjects: true
-  }) as SocialProps[]
+  }) as SocialList[]
 
   const handleTopEvent = () => {
     window.scrollTo(0, 0)
