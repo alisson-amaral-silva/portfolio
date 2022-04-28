@@ -4,7 +4,7 @@ import * as S from './styles'
 
 export interface SideProps {
   orientation: 'left' | 'right'
-  children: React.ReactElement
+  children: React.ReactNode
 }
 
 const Side = ({ children, orientation = 'left' }: SideProps) => {

@@ -1,7 +1,6 @@
 import usePrefersReducedMotion from 'hooks/usePrefersReducedMotion'
-import { MutableRefObject, useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { CSSTransition } from 'react-transition-group'
 import { KEY_CODES } from 'utils/constants'
 import * as S from './styles'
 
@@ -107,12 +106,7 @@ const Jobs = () => {
           {jobs &&
             jobs.map(({ title, url, company, range, html }, i) => {
               return (
-                <CSSTransition
-                  key={i}
-                  in={activeTabId === i}
-                  timeout={250}
-                  classNames="fade"
-                >
+                <>
                   <S.TabPanelWrapper
                     id={`panel-${i}`}
                     role="tabpanel"
@@ -136,7 +130,7 @@ const Jobs = () => {
                       dangerouslySetInnerHTML={{ __html: html }}
                     />
                   </S.TabPanelWrapper>
-                </CSSTransition>
+                </>
               )
             })}
         </S.TabPanelsWrapper>
