@@ -1,6 +1,18 @@
+<div align="center">
+  <img alt="Logo" src="https://raw.githubusercontent.com/alisson-amaral-silva/portfolio/main/public/img/english-letter-a-512.png" width="100" />
+</div>
+<h1 align="center">
+  Portfolio
+</h1>
+
+![en-demo](https://raw.githubusercontent.com/alisson-amaral-silva/portfolio/main/public/img/light-mode-en.png)
+
+![pt-br-demo](https://raw.githubusercontent.com/alisson-amaral-silva/portfolio/main/public/img/light-mode-pt.png)
+
+
 ## What is inside?
 
-This project uses lot of stuff as:
+This project uses lot of stuff such as:
 
 - [TypeScript](https://www.typescriptlang.org/)
 - [NextJS](https://nextjs.org/)
@@ -12,7 +24,7 @@ This project uses lot of stuff as:
 - [Prettier](https://prettier.io/)
 - [Husky](https://github.com/typicode/husky)
 
-## Primeiros passos
+## First Steps
 
 First, run the development server:
 
