@@ -25,7 +25,9 @@ const Home = () => {
   if (loading)
     return (
       <Base isLoading>
-        <Loading />
+        <div style={{ width: '30%', height: '100%' }}>
+          <Loading />
+        </div>
       </Base>
     )
 

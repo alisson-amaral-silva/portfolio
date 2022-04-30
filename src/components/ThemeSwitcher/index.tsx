@@ -10,21 +10,25 @@ import GlobalStyles from 'styles/global'
 import lightTheme from 'styles/lightTheme'
 import * as S from './styles'
 
-const ThemeSwitcher = ({ children }) => {
+export interface ThemeSwitcherProps {
+  children: React.ReactNode
+}
+
+const ThemeSwitcher = ({ children }: ThemeSwitcherProps) => {
   const { theme } = useContext(ChangeThemeContext)
   const { t } = useTranslation('common')
   const socialMedias = t('socialMedias', {
     returnObjects: true
-  })
+  }) as SocialList[]
 
   return (
-    <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
+    <ThemeProvider
+      theme={theme === 'light' ? (lightTheme as any) : (darkTheme as any)}
+    >
       <GlobalStyles />
-      <S.ContentWrapper>
-        <Social socialMedias={socialMedias} />
-        <Email orientation="right" email={process.env.EMAIL} />
-        {children}
-      </S.ContentWrapper>
+      {children}
+      <Social orientation="left" socialMedias={socialMedias} />
+      <Email orientation="right" email={process.env.EMAIL} />
     </ThemeProvider>
   )
 }

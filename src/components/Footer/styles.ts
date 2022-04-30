@@ -54,3 +54,8 @@ export const SocialLinksWrapper = styled.div`
     }
   `}
 `
+
+export const Icon = styled.img`
+  height: 30px;
+  width: 28px;
+`
