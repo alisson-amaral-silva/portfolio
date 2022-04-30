@@ -95,7 +95,7 @@ const Jobs = () => {
                   aria-selected={activeTabId === i ? true : false}
                   aria-controls={`panel-${i}`}
                 >
-                  <span>{company}</span>
+                  <span key={`${i} - {1}`}>{company}</span>
                 </S.TabButtonWrapper>
               )
             })}
@@ -108,6 +108,7 @@ const Jobs = () => {
               return (
                 <>
                   <S.TabPanelWrapper
+                    key={i}
                     id={`panel-${i}`}
                     role="tabpanel"
                     tabIndex={activeTabId === i ? '0' : '-1'}
@@ -115,17 +116,25 @@ const Jobs = () => {
                     aria-hidden={activeTabId !== i}
                     hidden={activeTabId !== i}
                   >
-                    <span className="default-text-color">{title}</span>
-                    <span className="company">
+                    <span
+                      key={`${i} - ${title}`}
+                      className="default-text-color"
+                    >
+                      {title}
+                    </span>
+                    <span key={`${i} - ${company}`} className="company">
                       &nbsp;@&nbsp;
                       <a href={url} className="company-link">
                         {company}
                       </a>
                     </span>
 
-                    <p className="range">{range}</p>
+                    <p key={`${i} - ${range}`} className="range">
+                      {range}
+                    </p>
 
                     <div
+                      key={`${i} - ${html}`}
                       className="default-text-color"
                       dangerouslySetInnerHTML={{ __html: html }}
                     />

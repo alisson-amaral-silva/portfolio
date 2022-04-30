@@ -25,7 +25,7 @@ const Home = () => {
   if (loading)
     return (
       <Base isLoading>
-        <div style={{ width: '30%', height: '100%' }}>
+        <div style={{ width: '30%', height: '100%', display: 'flex' }}>
           <Loading />
         </div>
       </Base>

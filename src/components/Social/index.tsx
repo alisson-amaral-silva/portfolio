@@ -1,6 +1,7 @@
 import Icon, { IconProps } from 'components/Icon'
 import Side from 'components/Side'
 import { ChangeLanguageContext } from 'context/ChangeLanguageContext'
+import Link from 'next/link'
 import { useContext } from 'react'
 import * as S from './styles'
 
@@ -29,23 +30,29 @@ const Social = ({ orientation, socialMedias }: SocialProps) => {
             </li>
           ))}
         <li>
-          <a href={`/${language}`} onClick={toggleLanguage}>
-            {language === 'en' ? (
-              <S.Icon
-                src="/img/brazil-icon.png"
-                data-testid="brazil-icon"
-                aria-label="brazil icon"
-                alt="brazil icon"
-              />
-            ) : (
-              <S.Icon
-                src="/img/usa-icon.png"
-                data-testid="usa-icon"
-                aria-label="usa icon"
-                alt="usa icon"
-              />
-            )}
-          </a>
+          {language === 'en' ? (
+            <Link href="/" locale="pt">
+              <a onClick={toggleLanguage}>
+                <S.Icon
+                  src="/img/brazil-icon.png"
+                  data-testid="brazil-icon"
+                  aria-label="brazil icon"
+                  alt="brazil icon"
+                />
+              </a>
+            </Link>
+          ) : (
+            <Link href="/" locale="en">
+              <a onClick={toggleLanguage}>
+                <S.Icon
+                  src="/img/usa-icon.png"
+                  data-testid="usa-icon"
+                  aria-label="usa icon"
+                  alt="usa icon"
+                />
+              </a>
+            </Link>
+          )}
         </li>
       </S.SocialListWrapper>
     </Side>
