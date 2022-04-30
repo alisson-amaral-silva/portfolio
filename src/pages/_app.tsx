@@ -12,8 +12,8 @@ function App({ Component, pageProps }: AppProps) {
         <ChangeLanguageProvider>
           <Head>
             <title>Portfolio</title>
-            <link rel="shortcut icon" href="/img/icon-512.png" />
-            <link rel="apple-touch-icon" href="/img/icon-512.png" />
+            <link rel="shortcut icon" href="/img/english-letter-a-512.png" />
+            <link rel="apple-touch-icon" href="/img/english-letter-a-512.png" />
             <link
               rel="manifest"
               crossOrigin="use-credentials"
