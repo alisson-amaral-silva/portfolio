@@ -53,7 +53,7 @@
         "github": "https://github.com/alisson-amaral-silva/won-games-client"
       },
       {
-        "title": "Banco do Alisson",
+        "title": "Alisson’s bank",
         "html": "<p>Get to know Styled Components.</p>",
         "techs": ["React", "Styled Components"],
         "image": "/img/alisson-bank.png",
