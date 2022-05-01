@@ -16,7 +16,7 @@ export const getStaticProps = async (ctx) => ({
   props: {
     ...(await serverSideTranslations(
       ctx?.params?.locale,
-      ['common', 'footer'],
+      ['common'],
       i18nextConfig
     ))
   }

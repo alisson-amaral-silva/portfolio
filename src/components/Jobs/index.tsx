@@ -85,7 +85,7 @@ const Jobs = () => {
             jobs.map(({ company }, i) => {
               return (
                 <S.TabButtonWrapper
-                  key={i}
+                  key={`${i} - regular button`}
                   isActive={activeTabId === i}
                   onClick={() => setActiveTabId(i)}
                   ref={(el) => (tabs.current[i] = el)}
@@ -106,40 +106,42 @@ const Jobs = () => {
           {jobs &&
             jobs.map(({ title, url, company, range, html }, i) => {
               return (
-                <>
-                  <S.TabPanelWrapper
-                    key={i}
-                    id={`panel-${i}`}
-                    role="tabpanel"
-                    tabIndex={activeTabId === i ? '0' : '-1'}
-                    aria-labelledby={`tab-${i}`}
-                    aria-hidden={activeTabId !== i}
-                    hidden={activeTabId !== i}
+                <S.TabPanelWrapper
+                  key={`${i} - tab`}
+                  id={`panel-${i}`}
+                  role="tabpanel"
+                  tabIndex={activeTabId === i ? '0' : '-1'}
+                  aria-labelledby={`tab-${i}`}
+                  aria-hidden={activeTabId !== i}
+                  hidden={activeTabId !== i}
+                >
+                  <span
+                    key={`${i} - ${title} - title`}
+                    className="default-text-color"
                   >
-                    <span
-                      key={`${i} - ${title}`}
-                      className="default-text-color"
+                    {title}
+                  </span>
+                  <span key={`${i} - ${company} - company`} className="company">
+                    &nbsp;@&nbsp;
+                    <a
+                      key={`${i} - ${url} - link`}
+                      href={url}
+                      className="company-link"
                     >
-                      {title}
-                    </span>
-                    <span key={`${i} - ${company}`} className="company">
-                      &nbsp;@&nbsp;
-                      <a href={url} className="company-link">
-                        {company}
-                      </a>
-                    </span>
+                      {company}
+                    </a>
+                  </span>
 
-                    <p key={`${i} - ${range}`} className="range">
-                      {range}
-                    </p>
+                  <p key={`${i} - ${range} - range`} className="range">
+                    {range}
+                  </p>
 
-                    <div
-                      key={`${i} - ${html}`}
-                      className="default-text-color"
-                      dangerouslySetInnerHTML={{ __html: html }}
-                    />
-                  </S.TabPanelWrapper>
-                </>
+                  <div
+                    key={`${i} - ${html} - html`}
+                    className="default-text-color"
+                    dangerouslySetInnerHTML={{ __html: html }}
+                  />
+                </S.TabPanelWrapper>
               )
             })}
         </S.TabPanelsWrapper>

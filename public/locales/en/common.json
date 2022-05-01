@@ -114,5 +114,8 @@
       "url": "https://www.linkedin.com/in/alisson-amaral"
     }
   ],
-  "change-language": "Change to portuguese"
+  "change-language": "Change to portuguese",
+  "og":{
+    "description": "Alisson is a software developer specializing in building (and occasionally designing) exceptional digital experiences."
+  }
 }

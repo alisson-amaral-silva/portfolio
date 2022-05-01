@@ -113,5 +113,8 @@
       "url": "https://www.linkedin.com/in/alisson-amaral"
     }
   ],
-  "change-language": "Trocar para Inglês"
+  "change-language": "Trocar para Inglês",
+  "og":{
+    "description": "Alisson é um desenvolvedor de software especializado em criar (e ocasionalmente design) com excepcionais experiências digitais."
+  }
 }

@@ -14,8 +14,6 @@ export const getStaticProps = () => {
 const Index = ({ locales }) => {
   const router = useRouter()
 
-  // language detection
-  // not recommended for production, use server redirection instead of this
   useEffect(() => {
     for (const locale of locales) {
       // eslint-disable-next-line no-undef
