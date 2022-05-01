@@ -5,7 +5,7 @@ import { ChangeThemeProvider } from 'context/ChangeThemeContext'
 import 'animate.css/animate.min.css'
 import { ChangeLanguageProvider } from 'context/ChangeLanguageContext'
 
-function App({ Component, pageProps }: AppProps) {
+function App({ Component, pageProps }) {
   return (
     <>
       <ChangeThemeProvider>
@@ -33,4 +33,9 @@ function App({ Component, pageProps }: AppProps) {
   )
 }
 
-export default appWithTranslation(App)
+const WrapperApp = appWithTranslation(App)
+
+export default function RouterEmulatedApp({ ...props }) {
+  props.router.locale = props.router.query.locale
+  return <WrapperApp {...props} />
+}

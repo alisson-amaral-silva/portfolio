@@ -35,8 +35,8 @@ export function ChangeLanguageProvider({
 
   useEffect(() => {
     const cookies = parseCookies()
-    const localTheme = cookies.USER_LANGUAGE
-    localTheme && setLanguage(localTheme)
+    const localLanguage = cookies.USER_LANGUAGE
+    localLanguage && setLanguage(localLanguage)
   }, [])
 
   return (

@@ -1,7 +1,6 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 import Icon from 'components/Icon'
 import usePrefersReducedMotion from 'hooks/usePrefersReducedMotion'
-import Image from 'next/image'
 import { useEffect, useRef } from 'react'
 import { useTranslation } from 'react-i18next'
 import * as S from './styles'
@@ -109,10 +108,9 @@ const Experiments = () => {
 
                 <div className="project-image">
                   <a href={github ? github : '#'}>
-                    <Image
+                    <img
                       src={image}
                       width={800}
-                      quality={100}
                       height={400}
                       alt={title}
                       className="img"

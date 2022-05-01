@@ -1,11 +1,14 @@
 import usePrefersReducedMotion from 'hooks/usePrefersReducedMotion'
-import Image from 'next/image'
 import { useEffect, useRef } from 'react'
 import { useTranslation } from 'react-i18next'
-import mypic from '../../../public/img/me.jpg'
 import * as S from './styles'
 
-const About = () => {
+export interface ILogo {
+  //   image: HTMLImageElement;
+  src: string | undefined
+}
+
+const About = ({ src }: ILogo) => {
   const { t } = useTranslation('common')
   const prefersReducedMotion = usePrefersReducedMotion()
   const revealContainer = useRef(null)
@@ -45,12 +48,11 @@ const About = () => {
         </div>
         <S.StyledPic>
           <div className="wrapper">
-            <Image
+            <img
               className="img"
-              src={mypic}
+              src={src}
               width={300}
               height={300}
-              quality={100}
               alt="Alisson"
             />
           </div>
