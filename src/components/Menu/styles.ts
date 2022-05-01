@@ -218,7 +218,7 @@ export const SidebarWrapper = styled.aside<HamburguerProps>`
   `}
 `
 
-export const ChangeLinkWrapper = styled.a`
+export const ResumeWrapper = styled.a`
   ${({ theme }) => css`
     color: ${theme.colors.primary};
     background-color: transparent;

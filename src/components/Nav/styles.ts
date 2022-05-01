@@ -154,3 +154,30 @@ export const NavWrapper = styled.nav`
     }
   `}
 `
+
+export const ResumeWrapper = styled.a`
+  ${({ theme }) => css`
+    color: ${theme.colors.primary};
+    background-color: transparent;
+    border: 1px solid ${theme.colors.primary};
+    border-radius: 4px;
+    padding: 1.25rem 1.75rem;
+    font-size: 14px;
+    line-height: 1;
+    text-decoration: none;
+    cursor: pointer;
+    transition: ${theme.transition.all};
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: ${theme.colors.darkMainBg};
+      outline: none;
+    }
+    &:after {
+      display: none !important;
+    }
+    padding: 18px 50px;
+    width: max-content;
+    margin: 0.3rem 1.4rem 0;
+  `}
+`

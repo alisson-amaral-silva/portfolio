@@ -11,7 +11,7 @@ import { useTranslation } from 'react-i18next'
 import * as S from './styles'
 
 const Nav = () => {
-  const { t } = useTranslation('common')
+  const { t, i18n } = useTranslation('common')
 
   const navLinks = t('navigation', { returnObjects: true }) as LinkProps[]
   const scrollDirectionInitialProps: UseScrollDirectionProps = {
@@ -47,13 +47,15 @@ const Nav = () => {
                   <S.MenuLink href={url}>{name}</S.MenuLink>
                 </li>
               ))}
-            {/* <ChangeLinkWrapper
-              onClick={toggleLanguage}
-              href={`/${language}`}
-              className="change-language-link"
+            <S.ResumeWrapper
+              href={
+                i18n.language === 'en' ? '/docs/resume_en' : '/docs/resume_pt'
+              }
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              {t('change-language')}
-            </ChangeLinkWrapper> */}
+              {t('resume')}
+            </S.ResumeWrapper>
             <li>
               <ThemeButton onClick={toggleTheme}>
                 <SwitchColorIcon theme={theme}></SwitchColorIcon>

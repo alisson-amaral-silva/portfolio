@@ -28,6 +28,11 @@ const Menu = ({ navLinks }: MenuProps) => {
   const toggleMenu = () => setIsOpen(!isOpen)
   const buttonRef = useRef(null)
   const navRef = useRef(null)
+  const resumeEn =
+    'https://raw.githubusercontent.com/alisson-amaral-silva/portfolio/main/public/docs/resume_en.pdf'
+
+  const resumePt =
+    'https://raw.githubusercontent.com/alisson-amaral-silva/portfolio/main/public/docs/resume_pt.pdf'
 
   const wrapperRef = useRef<any>()
 
@@ -74,16 +79,19 @@ const Menu = ({ navLinks }: MenuProps) => {
                 ))}
               </ol>
             )}
-            {/* <li>
-              <StaticI18nLink locale={i18n.language === 'en' ? 'pt' : 'en'}>
-                <S.ChangeLinkWrapper
-                  href={'/'}
-                  className="change-language-link"
-                >
-                  {t('change-language')}
-                </S.ChangeLinkWrapper>
-              </StaticI18nLink>
-            </li> */}
+            <li>
+              <S.ResumeWrapper
+                href={
+                  i18n.language === 'en'
+                    ? '/docs/resume_en.pdf'
+                    : '/docs/resume_pt.pdf'
+                }
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {t('resume')}
+              </S.ResumeWrapper>
+            </li>
             <S.ThemeMobileWrapper>
               <ThemeButton onClick={toggleTheme}>
                 <SwitchColorIcon theme={theme} />
