@@ -18,9 +18,11 @@ export interface LinkProps {
 
 export interface MenuProps {
   navLinks: LinkProps[]
+  resumeEn: string
+  resumePt: string
 }
 
-const Menu = ({ navLinks }: MenuProps) => {
+const Menu = ({ navLinks, resumeEn, resumePt }: MenuProps) => {
   const { t, i18n } = useTranslation('common')
 
   const [isOpen, setIsOpen] = useState(false)
@@ -28,11 +30,6 @@ const Menu = ({ navLinks }: MenuProps) => {
   const toggleMenu = () => setIsOpen(!isOpen)
   const buttonRef = useRef(null)
   const navRef = useRef(null)
-  const resumeEn =
-    'https://raw.githubusercontent.com/alisson-amaral-silva/portfolio/main/public/docs/resume_en.pdf'
-
-  const resumePt =
-    'https://raw.githubusercontent.com/alisson-amaral-silva/portfolio/main/public/docs/resume_pt.pdf'
 
   const wrapperRef = useRef<any>()
 
@@ -81,11 +78,7 @@ const Menu = ({ navLinks }: MenuProps) => {
             )}
             <li>
               <S.ResumeWrapper
-                href={
-                  i18n.language === 'en'
-                    ? '/docs/resume_en.pdf'
-                    : '/docs/resume_pt.pdf'
-                }
+                href={i18n.language === 'en' ? resumeEn : resumePt}
                 target="_blank"
                 rel="noopener noreferrer"
               >

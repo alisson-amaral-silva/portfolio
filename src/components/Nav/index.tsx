@@ -22,6 +22,11 @@ const Nav = () => {
   const scrollDirection = useScrollDirection(scrollDirectionInitialProps)
   const [scrolledToTop, setScrolledToTop] = useState(true)
   const { toggleTheme, theme } = useContext(ChangeThemeContext)
+  const resumeEn =
+    'https://raw.githubusercontent.com/alisson-amaral-silva/portfolio/main/public/docs/resume_en.pdf'
+
+  const resumePt =
+    'https://raw.githubusercontent.com/alisson-amaral-silva/portfolio/main/public/docs/resume_pt.pdf'
 
   const handleScroll = () => {
     setScrolledToTop(window.pageYOffset < 50)
@@ -48,9 +53,7 @@ const Nav = () => {
                 </li>
               ))}
             <S.ResumeWrapper
-              href={
-                i18n.language === 'en' ? '/docs/resume_en' : '/docs/resume_pt'
-              }
+              href={i18n.language === 'en' ? resumeEn : resumePt}
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -63,7 +66,7 @@ const Nav = () => {
             </li>
           </ol>
         </S.LinkWrapper>
-        <Menu navLinks={navLinks} />
+        <Menu resumeEn={resumeEn} resumePt={resumePt} navLinks={navLinks} />
       </S.NavWrapper>
     </S.Wrapper>
   )
