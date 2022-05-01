@@ -1,7 +1,5 @@
 import Icon from 'components/Icon'
 import Side from 'components/Side'
-import { ChangeLanguageContext } from 'context/ChangeLanguageContext'
-import { useContext } from 'react'
 import { useTranslation } from 'react-i18next'
 import { StaticI18nLink } from 'utils/i18n-browser'
 import * as S from './styles'
@@ -17,7 +15,6 @@ export interface SocialProps {
 }
 
 const Social = ({ orientation, socialMedias }: SocialProps) => {
-  const { toggleLanguage } = useContext(ChangeLanguageContext)
   const { i18n } = useTranslation('common')
 
   return (

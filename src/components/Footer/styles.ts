@@ -57,5 +57,6 @@ export const SocialLinksWrapper = styled.div`
 
 export const Icon = styled.img`
   height: 30px;
+  cursor: pointer;
   width: 28px;
 `

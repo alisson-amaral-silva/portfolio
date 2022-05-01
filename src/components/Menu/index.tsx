@@ -1,16 +1,14 @@
-import Logo from 'components/Logo'
 import SwitchColorIcon from 'components/SwitchColorIcon'
 import { ThemeButton } from 'components/ThemeButton'
-import { ChangeLanguageContext } from 'context/ChangeLanguageContext'
 import { ChangeThemeContext } from 'context/ChangeThemeContext'
 import useOnClickOutside, {
   UseOnClickOutsideProps
 } from 'hooks/useOnClickOutside'
-import useScrollDirection from 'hooks/useScrollDirection'
 import Head from 'next/head'
 import Link from 'next/link'
 import { useContext, useEffect, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import { StaticI18nLink } from 'utils/i18n-browser'
 import * as S from './styles'
 
 export interface LinkProps {
@@ -23,11 +21,10 @@ export interface MenuProps {
 }
 
 const Menu = ({ navLinks }: MenuProps) => {
-  const { t } = useTranslation('common')
+  const { t, i18n } = useTranslation('common')
 
   const [isOpen, setIsOpen] = useState(false)
   const { toggleTheme, theme } = useContext(ChangeThemeContext)
-  const { toggleLanguage, language } = useContext(ChangeLanguageContext)
   const toggleMenu = () => setIsOpen(!isOpen)
   const buttonRef = useRef(null)
   const navRef = useRef(null)
@@ -77,15 +74,16 @@ const Menu = ({ navLinks }: MenuProps) => {
                 ))}
               </ol>
             )}
-            <li>
-              <S.ChangeLinkWrapper
-                onClick={toggleLanguage}
-                href={`/${language}`}
-                className="change-language-link"
-              >
-                {t('change-language')}
-              </S.ChangeLinkWrapper>
-            </li>
+            {/* <li>
+              <StaticI18nLink locale={i18n.language === 'en' ? 'pt' : 'en'}>
+                <S.ChangeLinkWrapper
+                  href={'/'}
+                  className="change-language-link"
+                >
+                  {t('change-language')}
+                </S.ChangeLinkWrapper>
+              </StaticI18nLink>
+            </li> */}
             <S.ThemeMobileWrapper>
               <ThemeButton onClick={toggleTheme}>
                 <SwitchColorIcon theme={theme} />

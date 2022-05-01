@@ -1,14 +1,12 @@
 import Icon from 'components/Icon'
 import Logo from 'components/Logo'
 import { SocialList } from 'components/Social'
-import { ChangeLanguageContext } from 'context/ChangeLanguageContext'
-import { useContext } from 'react'
 import { useTranslation } from 'react-i18next'
+import { StaticI18nLink } from 'utils/i18n-browser'
 import * as S from './styles'
 
 const Footer = () => {
-  const { t } = useTranslation('common')
-  const { toggleLanguage, language } = useContext(ChangeLanguageContext)
+  const { t, i18n } = useTranslation('common')
 
   const hoverVariants = {
     hover: {
@@ -40,23 +38,25 @@ const Footer = () => {
             ))}
 
           <li>
-            <a href={`/${language}`} onClick={toggleLanguage}>
-              {language === 'en' ? (
+            {i18n.language === 'en' ? (
+              <StaticI18nLink locale="pt">
                 <S.Icon
                   src="/img/brazil-icon.png"
                   data-testid="brazil-icon"
                   aria-label="brazil icon"
                   alt="brazil icon"
                 />
-              ) : (
+              </StaticI18nLink>
+            ) : (
+              <StaticI18nLink locale="en">
                 <S.Icon
                   src="/img/usa-icon.png"
                   data-testid="usa-icon"
                   aria-label="usa icon"
                   alt="usa icon"
                 />
-              )}
-            </a>
+              </StaticI18nLink>
+            )}
           </li>
         </ul>
       </S.SocialLinksWrapper>

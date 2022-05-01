@@ -1,16 +1,14 @@
+import Logo from 'components/Logo'
 import Menu, { LinkProps } from 'components/Menu'
+import SwitchColorIcon from 'components/SwitchColorIcon'
+import { ThemeButton } from 'components/ThemeButton'
+import { ChangeThemeContext } from 'context/ChangeThemeContext'
 import useScrollDirection, {
   UseScrollDirectionProps
 } from 'hooks/useScrollDirection'
 import { useContext, useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import * as S from './styles'
-import { ChangeLinkWrapper } from '../Menu/styles'
-import { ThemeButton } from 'components/ThemeButton'
-import SwitchColorIcon from 'components/SwitchColorIcon'
-import { ChangeThemeContext } from 'context/ChangeThemeContext'
-import { ChangeLanguageContext } from 'context/ChangeLanguageContext'
-import Logo from 'components/Logo'
 
 const Nav = () => {
   const { t } = useTranslation('common')
@@ -24,7 +22,6 @@ const Nav = () => {
   const scrollDirection = useScrollDirection(scrollDirectionInitialProps)
   const [scrolledToTop, setScrolledToTop] = useState(true)
   const { toggleTheme, theme } = useContext(ChangeThemeContext)
-  const { toggleLanguage, language } = useContext(ChangeLanguageContext)
 
   const handleScroll = () => {
     setScrolledToTop(window.pageYOffset < 50)
