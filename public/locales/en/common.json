@@ -53,11 +53,34 @@
         "github": "https://github.com/alisson-amaral-silva/won-games-client"
       },
       {
-        "title": "Alisson’s bank",
-        "html": "<p>Get to know Styled Components.</p>",
-        "techs": ["React", "Styled Components"],
-        "image": "/img/alisson-bank.png",
-        "github": "https://github.com/alisson-amaral-silva/styled-components-studies"
+        "title": "Coffee Delivery",
+        "html": "<p>A challenge to understand concepts of state, context api, local storage, immutability, lists and keys, props and components.</p>",
+        "techs": [
+          "React",
+          "TypeScript",
+          "Styled Components",
+          "React Query",
+          "immer",
+          "React Hook Form",
+          "Zod"
+        ],
+        "image": "/img/coffee-delivery.png",
+        "url": "https://coffee-delivery-alpha-one.vercel.app/",
+        "github": "https://github.com/alisson-amaral-silva/coffee-delivery"
+      },
+      {
+        "title": "Ignite Shop",
+        "html": "<p>A course that creates a simple e-commerce with stripe integrations.</p>",
+        "techs": [
+          "React",
+          "TypeScript",
+          "Axios",
+          "Stripe",
+          "Stitches"
+        ],
+        "image": "/img/ignite-shop.png",
+        "url": "https://ignite-shop-spcr.vercel.app/",
+        "github": "https://github.com/alisson-amaral-silva/ignite-shop"
       },
       {
         "title": "Material UI Phone Number TextField",

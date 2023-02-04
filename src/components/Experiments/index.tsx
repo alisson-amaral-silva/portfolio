@@ -12,6 +12,7 @@ export interface ExperimentsProps {
   image: string
   github: string
   npm?: string
+  url?: string
 }
 
 const Experiments = () => {
@@ -63,63 +64,65 @@ const Experiments = () => {
       </h4>
       <S.ExperimentsGridWrapper>
         {experiments &&
-          experiments.map(({ title, techs, github, image, html, npm }, i) => {
-            return (
-              <S.ExperimentWrapper
-                key={i}
-                ref={(el) => (revealContainer.current[i] = el)}
-              >
-                <div className="project-content">
-                  <div>
-                    <p className="project-overline">
-                      {t('experiment-course.overline')}
-                    </p>
-                    <h5 className="project-title">
-                      <a href={github}>{title}</a>
-                    </h5>
+          experiments.map(
+            ({ title, techs, github, image, html, npm, url }, i) => {
+              return (
+                <S.ExperimentWrapper
+                  key={i}
+                  ref={(el) => (revealContainer.current[i] = el)}
+                >
+                  <div className="project-content">
+                    <div>
+                      <p className="project-overline">
+                        {t('experiment-course.overline')}
+                      </p>
+                      <h5 className="project-title">
+                        <a href={github}>{title}</a>
+                      </h5>
 
-                    <div
-                      className="project-description"
-                      dangerouslySetInnerHTML={{ __html: html }}
-                    />
+                      <div
+                        className="project-description"
+                        dangerouslySetInnerHTML={{ __html: html }}
+                      />
 
-                    {techs.length && (
-                      <ul className="project-tech-list">
-                        {techs.map((tech, i) => (
-                          <li key={i}>{tech}</li>
-                        ))}
-                      </ul>
-                    )}
-
-                    <div className="project-links">
-                      {github && (
-                        <a href={github} aria-label="GitHub Link">
-                          <Icon name="GitHub" />
-                        </a>
+                      {techs.length && (
+                        <ul className="project-tech-list">
+                          {techs.map((tech, i) => (
+                            <li key={i}>{tech}</li>
+                          ))}
+                        </ul>
                       )}
-                      {npm && (
-                        <a href={npm} aria-label="Npm Link" className="npm">
-                          <Icon />
-                        </a>
-                      )}
+
+                      <div className="project-links">
+                        {github && (
+                          <a href={github} aria-label="GitHub Link">
+                            <Icon name="GitHub" />
+                          </a>
+                        )}
+                        {npm && (
+                          <a href={npm} aria-label="Npm Link" className="npm">
+                            <Icon />
+                          </a>
+                        )}
+                      </div>
                     </div>
                   </div>
-                </div>
 
-                <div className="project-image">
-                  <a href={github ? github : '#'}>
-                    <img
-                      src={image}
-                      width={800}
-                      height={400}
-                      alt={title}
-                      className="img"
-                    />
-                  </a>
-                </div>
-              </S.ExperimentWrapper>
-            )
-          })}
+                  <div className="project-image">
+                    <a href={url ? url : github}>
+                      <img
+                        src={image}
+                        width={800}
+                        height={400}
+                        alt={title}
+                        className="img"
+                      />
+                    </a>
+                  </div>
+                </S.ExperimentWrapper>
+              )
+            }
+          )}
       </S.ExperimentsGridWrapper>
     </S.ExperimentsSection>
   )

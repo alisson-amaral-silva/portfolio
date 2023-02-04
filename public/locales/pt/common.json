@@ -53,11 +53,34 @@
         "github": "https://github.com/alisson-amaral-silva/won-games-client"
       },
       {
-        "title": "Banco do Alisson",
-        "html": "<p>Conhecer Styled Components.</p>",
-        "techs": ["React", "Styled Components"],
-        "image": "/img/alisson-bank.png",
-        "github": "https://github.com/alisson-amaral-silva/styled-components-studies"
+        "title": "Coffee Delivery",
+        "html": "<p>Um desafio de um curso feito para entender conceitos de estados, context api, local storage, imutabilidade, listas e chaves, propriedades e componentização.</p>",
+        "techs": [
+          "React",
+          "TypeScript",
+          "Styled Components",
+          "React Query",
+          "immer",
+          "React Hook Form",
+          "Zod"
+        ],
+        "image": "/img/coffee-delivery.png",
+        "url": "https://coffee-delivery-alpha-one.vercel.app/",
+        "github": "https://github.com/alisson-amaral-silva/coffee-delivery"
+      },
+      {
+        "title": "Ignite Shop",
+        "html": "<p>Um curso que cria um e-commerce simples com integração com stripe.</p>",
+        "techs": [
+          "React",
+          "TypeScript",
+          "Axios",
+          "Stripe",
+          "Stitches"
+        ],
+        "image": "/img/ignite-shop.png",
+        "url": "https://ignite-shop-spcr.vercel.app/",
+        "github": "https://github.com/alisson-amaral-silva/ignite-shop"
       },
       {
         "title": "Material UI Phone Number TextField",
@@ -114,7 +137,7 @@
     }
   ],
   "change-language": "Trocar para Inglês",
-  "og":{
+  "og": {
     "description": "Alisson é um desenvolvedor de software especializado em criar (e ocasionalmente design) com excepcionais experiências digitais."
   },
   "resume": "Currículo"

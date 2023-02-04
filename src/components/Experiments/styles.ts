@@ -316,9 +316,9 @@ export const ExperimentWrapper = styled.li`
         border-radius: 4px;
         mix-blend-mode: multiply;
         filter: grayscale(100%) contrast(1) brightness(90%);
+        object-fit: cover;
 
         @media (max-width: 768px) {
-          object-fit: cover;
           width: auto;
           height: 100%;
           filter: grayscale(100%) contrast(1) brightness(50%);
