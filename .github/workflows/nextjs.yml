@@ -37,6 +37,8 @@ jobs:
           if [ -f "${{ github.workspace }}/yarn.lock" ]; then
           yarn install --frozen-lockfile
           elif [ -f "${{ github.workspace }}/package-lock.json" ]; then
+          npm ci
+          else
           npm i
           fi
       - name: Setup Node
