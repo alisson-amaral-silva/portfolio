@@ -21,9 +21,9 @@ jobs:
 
       - name: Install dependencies
         run: |
-          if [ -e yarn.lock ]; then
+          if [ -f "${{ github.workspace }}/yarn.lock" ]; then
           yarn install --frozen-lockfile
-          elif [ -e package-lock.json ]; then
+          elif [ -f "${{ github.workspace }}/package-lock.json" ]; then
           npm ci
           else
           npm i
