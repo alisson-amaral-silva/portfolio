@@ -1,5 +1,8 @@
 name: ci
-on: [pull_request]
+on:
+  # Runs on pushes targeting the default branch
+  push:
+    branches: ["main"]
 
 jobs:
   # This workflow contains a single job called "build"
