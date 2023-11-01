@@ -2,8 +2,11 @@ name: ci
 on: [pull_request]
 
 jobs:
+  # This workflow contains a single job called "build"
   build:
+    # The type of runner that the job will run on
     runs-on: ubuntu-latest
+    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
@@ -23,3 +26,4 @@ jobs:
         run: yarn test
 
       - name: Build
+        run : yarn build
